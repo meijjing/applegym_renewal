@@ -1,0 +1,298 @@
+/*
+CSS Document
+06-03-brand_business
+*/
+
+
+/* 모바일용 CSS */
+
+/* 메인 img 영역 CSS  */
+.main_section {
+  width: 100%;
+  height: auto;
+  background: #222222;
+}
+
+.main_img {
+  position: relative;
+}
+
+.main_img img {
+  display: block;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.aside {
+  display: none;
+}
+
+.contents {
+  width: 100%;
+  margin: 0 auto;
+  padding: 80px 5%;
+  box-sizing: border-box;
+  text-align: center;
+  background: #eee;
+}
+
+.business_section {
+  line-height: 1.8;
+}
+
+.business_section h3 {
+  font-weight: normal;
+  font-size: 1.25rem;
+}
+
+.business_section p {
+  margin: 30px auto;
+}
+
+.business_section p img {
+  display: block;
+  width: 50%;
+  max-width: 200px;
+  margin: 50px auto;
+  -webkit-animation: rotate_ani 8s normal linear infinite;
+  animation: rotate_ani 8s normal linear infinite;
+}
+
+@-webkit-keyframes rotate_ani {
+
+  0%,
+  50%,
+  100% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+
+  25% {
+    -webkit-transform: rotate(15deg);
+    transform: rotate(15deg);
+  }
+
+  75% {
+    -webkit-transform: rotate(-15deg);
+    transform: rotate(-15deg);
+  }
+
+}
+
+@keyframes rotate_ani {
+
+  0%,
+  50%,
+  100% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+
+  25% {
+    -webkit-transform: rotate(15deg);
+    transform: rotate(15deg);
+  }
+
+  75% {
+    -webkit-transform: rotate(-15deg);
+    transform: rotate(-15deg);
+  }
+
+
+}
+
+
+/* 파트너 사업 영역 CSS */
+.partner_section {
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.partner_section ul {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.partner_section ul li {
+  width: 100%;
+  max-width: 500px;
+  margin: 10px auto;
+  font-size: 0.875rem;
+  color: #585859;
+  line-height: 25px;
+}
+
+.partner_section ul li img {
+  width: 100%;
+  max-width: 280px;
+  display: block;
+  margin: 10px auto;
+}
+
+.partner_section ul li b {
+  font-weight: normal;
+}
+
+.partner_section ul li span {
+  width: 25px;
+  height: 25px;
+  background: url('../../images/06-brand/link-b.png') no-repeat center;
+  background-size: 16px;
+  margin-left: 10px;
+  display: inline-block;
+  text-indent: -9999px;
+}
+
+.partner_section ul li img:hover {
+  opacity: .7;
+  transition: all .7s;
+}
+
+.partner_section ul li:hover {
+  color: #8c8c8c;
+  transition: all .7s;
+}
+
+.partner_section ul li:hover span {
+  width: 25px;
+  height: 25px;
+  background: url('../../images/06-brand/link.png') no-repeat center;
+  background-size: 16px;
+  transition: all .7s;
+}
+
+.partner_section ul li:active,
+.partner_section ul li span:active {
+  opacity: 0.5;
+}
+
+
+
+
+
+
+
+/* 태블릿용 CSS */
+@media all and (min-width: 768px) {
+
+  /* aside */
+
+  .aside {
+    display: block !important;
+    width: 450px;
+    height: 60px;
+
+    position: absolute;
+    bottom: 4px;
+    left: 50%;
+    margin-left: -225px;
+  }
+
+  .aside li {
+    width: 150px;
+    line-height: 60px;
+    float: left;
+    font-size: 1rem;
+    text-align: center;
+    color: #fff;
+    text-shadow: 2px 2px 8px #000;
+  }
+
+  .aside li a {
+    display: block;
+    height: 100%;
+  }
+
+  .aside .on_menu {
+    display: block;
+    color: #e81a46;
+    font-weight: bold;
+  }
+
+  .aside .on_menu:after {
+    border-bottom: 4px solid #e81a46;
+    bottom: 0;
+    content: " ";
+    display: block;
+    margin: 0 auto;
+    width: 60%;
+
+  }
+
+  .aside .aside_menu {
+    display: block;
+  }
+
+  .aside .aside_menu:after {
+    border-bottom: 4px solid rgba(255, 255, 255, 0);
+    bottom: 0;
+    content: " ";
+    display: block;
+    margin: 0 auto;
+    -webkit-transition: all .28s ease-in-out;
+    transition: all .28s ease-in-out;
+    width: 0;
+  }
+
+  .aside .aside_menu:hover:after {
+    -webkit-transition: width 350ms ease-in-out;
+    transition: width 350ms ease-in-out;
+    width: 60%;
+
+    font-weight: bold;
+    border-bottom: 4px solid #e81a46;
+  }
+
+  .aside .aside_menu:hover {
+    color: #e81a46;
+    font-weight: bold;
+    transition: all .4s;
+  }
+
+
+  .partner_section ul {
+    max-width: 500px;
+    margin: 0 auto;
+    flex-flow: row wrap;
+  }
+
+  .partner_section ul li {
+    width: 50%;
+    margin: 20px auto;
+    padding: 0 1px;
+    box-sizing: border-box;
+  }
+
+}
+
+
+
+
+
+
+/* PC용 CSS */
+@media all and (min-width: 1024px) {
+
+  .partner_section ul {
+    max-width: 660px;
+  }
+
+
+  .partner_section ul li {
+    width: 33%;
+    margin: 20px 1px;
+  }
+
+  .partner_section .second_line {
+    width: 440px !important;
+  }
+
+  .partner_section .second_line li {
+    width: 49%;
+  }
+
+}

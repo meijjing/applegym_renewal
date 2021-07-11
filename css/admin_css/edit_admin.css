@@ -1,0 +1,417 @@
+/* 
+CSS Document
+edit_admin.css
+*/
+
+
+/* 관리자 페이지 정보수정 폼 CSS */
+
+.edit_section {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 30px 2%;
+  box-sizing: border-box;
+}
+
+.edit_section h2 {
+  padding: 3px 0;
+  padding-left: 10px;
+  box-sizing: border-box;
+  border-bottom: 1px solid #000;
+}
+
+.edit_section .edit_pg {
+  width: 100%;
+  margin: 10px auto;
+  padding: 20px 1%;
+  box-sizing: border-box;
+  background: rgba(225, 225, 225, 0.9);
+  position: relative;
+}
+
+.edit_pg {
+  font-size: 0.75rem;
+}
+
+.edit_form {
+  width: 94%;
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.edit_form fieldset {
+  margin: 0 auto;
+  margin-bottom: 0;
+  font-size: 0.625em;
+  color: #e81a46;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.edit_form fieldset p {
+  float: left;
+  width: 100%;
+  margin: 10px auto;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.edit_form fieldset label {
+  width: 100%;
+  margin-left: 10px;
+  color: #000;
+  font-family: 'Jua';
+  font-size: 0.75rem;
+}
+
+.edit_form fieldset .fixed_value {
+  align-items: center;
+}
+
+.edit_form fieldset .fixed_value label {
+  width: 50px;
+}
+
+.edit_form fieldset .fixed_value span  {
+  width: calc(100% - 60px);
+  color: #585859;
+  padding-left: 15px;
+  box-sizing: border-box;
+  font-weight: bold;
+  border-bottom: 2px solid #8c8c8c!important;
+  font-size: 0.875rem;
+}
+
+.edit_form fieldset .mem_nm {
+  width: 60%;
+  margin-right: 5%;
+}
+
+.edit_form fieldset .male_flg {
+  width: 35%;
+}
+
+.edit_form fieldset .mem_pwd {
+  margin-bottom: 0;
+  margin-top: 30px;
+}
+
+.edit_form fieldset .re_pwd {
+  margin-top: 5px;
+}
+
+
+.edit_form fieldset input {
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  margin: 5px 0;
+  border: 0;
+  border-bottom: 2px solid #585859;
+  border-radius: 8px 8px 0 0;
+  padding-left: 15px;
+  box-sizing: border-box;
+  outline: none;
+  color: #8c8c8c;
+  background: linear-gradient(rgba(255, 255, 255, .9), #fff);
+  font-size: 0.75rem;
+  transition: .3s ease-in-out;
+}
+
+.edit_form .tel_no input,
+.edit_form #postal_code {
+  width: 70%;
+  border-radius: 8px 0 0 0;
+  /* float: left; */
+}
+
+.edit_form fieldset input:active,
+.edit_form fieldset input:focus {
+  border-bottom: 2px solid #e81a46;
+  color: #000;
+}
+
+
+.edit_form .tel_no button,
+.edit_form .address button {
+  width: 30%;
+  height: 40px;
+  line-height: 40px;
+  margin: 5px 0;
+  font-size: 0.75rem;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  border-radius: 0 8px 0 0;
+  color: #fff;
+  cursor: pointer;
+
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+
+  text-shadow: 0 1px 1px rgba(0, 0, 0, .3);
+  background-image: linear-gradient(to right, rgb(32, 30, 34) 0%, #e81a46 52%, rgb(32, 30, 34) 100%)
+}
+
+
+.edit_form .tel_no button:hover,
+.edit_form .address button:hover {
+  background-position: right center;
+  text-decoration: none;
+}
+
+.edit_form .tel_no button:active,
+.edit_form .address button:active {
+  opacity: 0.7;
+}
+
+.edit_form .mem_pwd input:invalid {
+  background: rgba(255, 41, 87, 0.3);
+}
+
+.edit_form span {
+  font-size: 0.625rem;
+}
+
+.edit_form .email_con {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.edit_form .email_con input {
+  width: 30%;
+}
+
+.edit_form .email_con select {
+  display: block;
+  width: 30%;
+  margin-left: 2%;
+  height: 40px;
+  margin: 5px 0;
+  padding: 0 15px;
+  box-sizing: border-box;
+  border: 0;
+  border-bottom: 2px solid #585859;
+  border-radius: 8px 8px 0 0;
+  background: linear-gradient(rgba(255, 255, 255, .9), #fff);
+  font-size: 0.75rem;
+  color: #585859;
+  outline: none;
+}
+
+.edit_form .email_con span {
+  display: block;
+  width: 8%;
+  height: 40px;
+  line-height: 40px;
+  margin: 5px 0;
+  text-align: center;
+  font-size: 0.875rem;
+  font-weight: bold;
+  color: #000;
+}
+
+.edit_form .address label {
+  margin-top: 5px;
+}
+
+
+.edit_form .edit_btn {
+  text-align: center;
+}
+
+.edit_form .edit_btn button {
+  display: block;
+  /* width: 60%; */
+  margin: 0 auto;
+  margin-top: 20px;
+  outline: none;
+  cursor: pointer;
+  text-align: center;
+  font-size: 0.875rem;
+  padding: 12px 70px;
+  border-radius: 20em;
+  -webkit-border-radius: 20em;
+  -moz-border-radius: 20em;
+
+  color: #fff;
+  border: 0;
+
+  background: #000;
+  background: -moz-linear-gradient(#292929 0%, #000 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #292929), color-stop(100%, #000));
+  background: -webkit-linear-gradient(#292929 0%, #000 100%);
+  background: linear-gradient(#292929 0%, #000 100%);
+
+  transition: all .2s ease-in-out;
+
+  box-shadow: -1px -1px 2px rgba(228, 226, 226, .8), 1px 1px 4px rgba(0, 0, 0, .5);
+  -webkit-box-shadow: -1px -1px 2px rgba(228, 226, 226, .8), 1px 1px 4px rgba(0, 0, 0, .5);
+  -moz-box-shadow: -1px -1px 2px rgba(228, 226, 226, .8), 1px 1px 4px rgba(0, 0, 0, .5);
+
+}
+
+.edit_form .edit_btn button:hover {
+  background: #000;
+  background: -moz-linear-gradient(#333333 0%, #000000 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #333333), color-stop(100%, #000000));
+  background: -webkit-linear-gradient(#333333 0%, #000000 100%);
+  background: linear-gradient(#333333 0%, #000000 100%);
+}
+
+.edit_form .edit_btn button:active {
+  opacity: 0.5;
+}
+
+
+.edit_form .close_btn button {
+  width: 30px;
+  height: 30px;
+
+  background: url('../../images/main/close.png') no-repeat center;
+  background-size: 20px;
+  text-indent: -9999px;
+  border: 0;
+
+  position: absolute;
+  top: -40px;
+  right: 3px;
+  cursor: pointer;
+}
+
+.edit_form .close_btn button:hover {
+  background: url('../../images/main/close-p.png') no-repeat center;
+  background-size: 20px;
+}
+
+.edit_form .close_btn button:active {
+  opacity: .4;
+}
+
+
+
+
+
+
+
+
+
+
+/* 태블릿용 CSS */
+@media all and (min-width: 768px) {
+
+  .edit_section {
+    width: 90%;
+  }
+
+  .edit_form {
+    width: 80%;
+  }
+
+  .edit_form fieldset label {
+    font-size: 0.875rem;
+  }
+
+  .edit_form .mem_pwd {
+    width: 48%;
+    margin-right: 4%;
+  }
+
+  .edit_form .re_pwd {
+    margin-top: 30px!important;
+    margin-bottom: 0;
+  }
+
+  .edit_form .re_pwd {
+    width: 48%;
+  }
+
+
+
+
+
+  .edit_form .edit_btn button {
+    padding: 14px 80px;
+  }
+
+
+
+
+
+
+
+
+}
+
+/* PC용 CSS */
+@media all and (min-width: 1024px) {
+
+
+  .contents .edit_pg {
+    width: 70%;
+  }
+
+  .edit_pg h3 {
+    font-size: 2.5em;
+  }
+
+  .edit_form {
+    width: 70%;
+    padding-top: 10px;
+  }
+
+  /* .edit_form fieldset {
+    font-size: 0.750em;
+  } */
+
+  .edit_form fieldset p {
+    margin: 12px auto;
+  }
+
+
+
+  .edit_form fieldset input,
+  .edit_form fieldset .fixed_value {
+    height: 48px;
+    line-height: 48px;
+    font-size: 0.813rem;
+  }
+
+  .edit_form fieldset label {
+    font-size: 0.75rem;
+  }
+
+  .edit_form fieldset span {
+    font-size: 0.75rem;
+  }
+
+  .edit_form #male_flg {
+    height: 48px;
+  }
+
+  .edit_form .tel_no button,
+  .edit_form .address button {
+    height: 48px;
+    padding: 0 25px;
+  }
+
+  .edit_form .email_con select {
+    height: 48px;
+    font-size: 0.813rem;
+  }
+
+  .edit_form .email_con span {
+    height: 48px;
+  }
+
+  .edit_form .edit_btn button {
+    font-size: 1.5em;
+    padding: 16px 90px;
+  }
+
+}

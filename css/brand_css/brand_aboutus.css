@@ -1,0 +1,209 @@
+/*
+CSS Document
+06-01-brand_aboutus
+*/
+
+.m_divider {
+  width: 20%;
+  height: 4px;
+  background: #8c8c8c;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+/* 모바일용 CSS */
+
+/* 메인 img 영역 CSS  */
+.main_section {
+  width: 100%;
+  height: auto;
+  background: #222222;
+}
+
+.main_img {
+  position: relative;
+}
+
+.main_img img {
+  display: block;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.aside {
+  display: none;
+}
+
+
+/* contents */
+.contents {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  font-size: 0.875rem;
+  line-height: 1.8;
+  text-align: center;
+  padding: 40px 0;
+  box-sizing: border-box;
+}
+
+
+.aboutus_section h3 {
+  font-size: 1.25rem;
+  font-weight: normal;
+  margin-bottom: 20px;
+}
+
+.aboutus_section h3,
+.aboutus_section p {
+  padding: 0 8%;
+  box-sizing: border-box;
+}
+
+.aboutus_section h3 span {
+  display: inline-block;
+}
+
+
+
+.aboutus_section .aboutus_logo {
+  display: block;
+  margin: 30px auto;
+  width: 100%;
+  height: 300px;
+  background: url('../../images/06-brand/aboutus_logo.png') no-repeat center;
+  background-size: auto 100%;
+  background-attachment: scroll;
+}
+
+.aboutus_section h3 b {
+  color: #e81a46;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, .2);
+}
+
+
+
+
+
+
+
+
+
+
+
+/* 태블릿용 CSS */
+@media all and (min-width: 768px) {
+
+  /* aside */
+
+  .aside {
+    display: block !important;
+    width: 450px;
+    height: 60px;
+
+    position: absolute;
+    bottom: 4px;
+    left: 50%;
+    margin-left: -225px;
+  }
+
+  .aside li {
+    width: 150px;
+    line-height: 60px;
+    float: left;
+    font-size: 1rem;
+    text-align: center;
+    color: #fff;
+    text-shadow: 2px 2px 8px #000;
+  }
+
+  .aside li a {
+    display: block;
+    height: 100%;
+  }
+
+  .aside .on_menu {
+    display: block;
+    color: #e81a46;
+    font-weight: bold;
+  }
+
+  .aside .on_menu:after {
+    border-bottom: 4px solid #e81a46;
+    bottom: 0;
+    content: " ";
+    display: block;
+    margin: 0 auto;
+    width: 60%;
+
+  }
+
+  .aside .aside_menu {
+    display: block;
+  }
+
+  .aside .aside_menu:after {
+    border-bottom: 4px solid rgba(255, 255, 255, 0);
+    bottom: 0;
+    content: " ";
+    display: block;
+    margin: 0 auto;
+    -webkit-transition: all .28s ease-in-out;
+    transition: all .28s ease-in-out;
+    width: 0;
+  }
+
+  .aside .aside_menu:hover:after {
+    -webkit-transition: width 350ms ease-in-out;
+    transition: width 350ms ease-in-out;
+    width: 60%;
+
+    font-weight: bold;
+    border-bottom: 4px solid #e81a46;
+  }
+
+  .aside .aside_menu:hover {
+    color: #e81a46;
+    font-weight: bold;
+    transition: all .4s;
+  }
+
+  .contents {
+    font-size: 1rem;
+    padding: 80px 0;
+  }
+
+  .aboutus_section h3 {
+    font-size: 1.5rem;
+  }
+
+  .aboutus_section h3,
+  .aboutus_section p {
+    padding: 0 8%;
+    max-width: 1100px;
+    box-sizing: border-box;
+  }
+
+  .aboutus_section .aboutus_logo {
+    margin: 40px auto;
+    height: 400px;
+    background: url('../../images/06-brand/aboutus_logo.png') no-repeat top center;
+    background-size: auto 800px;
+    background-attachment: fixed;
+    -ms-transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+
+}
+
+/* PC용 CSS */
+@media all and (min-width: 1024px) {
+
+  .m_divider {
+    margin-top: 80px;
+  }
+
+}

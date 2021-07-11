@@ -1,0 +1,216 @@
+/*
+admin_header.css
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+
+body {
+  font-family: 'Nanum Gothic', 'Noto Sans KR', 'Jua', sans-serif;
+  width: 100%;
+  height: 100%;
+  line-height: 1.5;
+  font-size: 16px;
+  position: relative;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.blind {
+  position: absolute;
+  width: 0;
+  height: 0;
+  line-height: 0;
+  text-indent: -9999px;
+  overflow: hidden;
+}
+
+.cfixed:before,
+.container:before,
+.cfixed:after,
+.container:after {
+  display: block;
+  content: " ";
+  line-height: 0;
+  clear: both;
+}
+
+
+/* 헤더 영역 */
+header {
+  width: 100%;
+  height: 50px;
+  padding: 0 10px;
+  box-sizing: border-box;
+  background-color: #000;
+}
+
+.header {
+  width: 100%;
+  margin: 0 auto;
+  /* max-width: 1200px; */
+  /* position: relative; */
+
+}
+
+.header_on_mobile {
+  position: fixed;
+  height: 100%;
+  background: rgba(0, 0, 0, .2);
+  top: 0px;
+  left: 0;
+  padding: 0 10px;
+  box-sizing: border-box;
+  z-index: 10;
+
+}
+
+.header h1 {
+  width: 200px;
+  line-height: 50px;
+  text-align: left;
+  float: left;
+  color: #fff;
+  z-index: 20;
+}
+
+.menu_toggle_btn {
+  display: block;
+  width: 36px;
+  height: 50px;
+  background: url('../../images/main/menu-mobile.png') no-repeat center;
+  background-size: 32px;
+  float: right;
+}
+
+.nav {
+  width: 250px;
+  height: 100%;
+
+  position: fixed;
+  top: 50px;
+  right: -280px;
+
+  font-size: 1rem;
+  text-align: right;
+  z-index: 10;
+  background: #e81a46;
+  
+  transition: .4s ease-in-out;
+  /* display: none; */
+  
+}
+
+.show_on_mobile {
+  right: 0;
+  display: block;
+  background: #e81a46;
+  overflow-x: hidden;
+  box-shadow: -2px 0px 8px 2px rgba(0, 0, 0, .3);
+  z-index: 5;
+}
+
+.user_btn {
+  margin-top: 20px;
+  font-size: 0.875rem;
+}
+
+
+.nav li {
+  width: 100%;
+}
+
+.nav li a {
+  display: block;
+  padding: 18px;
+  box-sizing: border-box;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+  transition: 0.2s ease-in-out;
+}
+
+.nav li a:hover {
+  color: #000;
+}
+
+
+
+
+
+
+
+
+/* 태블릿용 CSS */
+@media all and (min-width: 768px) {
+
+  .header h1 {
+    width: 20%;
+  }
+
+  .menu_toggle_btn {
+    display: none;
+  }
+
+  .nav {
+    top: 0;
+    right: 0px;
+    width: 80%;
+    height: 50px;
+    text-align: center;
+
+    box-shadow: none;
+    border: none;
+    background: none;
+    position: static;
+  }
+
+  .nav li {
+    width: auto;
+    float: left;
+    position: relative;
+  }
+
+  .nav li a {
+    padding: 0 25px;
+    line-height: 50px;
+    font-size: 0.875rem;
+  }
+
+  .nav li a:hover {
+    color: #e81a46;
+  }
+
+
+  .user_btn {
+    width: 100px;
+    margin-top: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  .home_btn {
+    display: block;
+    width: 45px!important;
+    height: 50px;
+    background: none;
+    background: url('../../images/main/menu-home-pink.png') no-repeat center;
+    background-size: 24px;
+    text-indent: -9999px;
+  }
+
+  .logout_btn {
+    display: block;
+    width: 45px!important;
+    height: 50px;
+    background: url('../../images/main/menu-logout-p.png') no-repeat center;
+    background-size: 24px;
+    text-indent: -9999px;
+  }
+
+}
+
+/* PC용 CSS */
+@media all and (min-width: 1024px) {}

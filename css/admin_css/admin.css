@@ -1,0 +1,23 @@
+/*
+admin.php
+*/
+
+
+.admin_section {
+  padding: 100px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+
+
+
+/* 태블릿용 CSS */
+@media all and (min-width: 768px) {
+
+
+
+}
+
+/* PC용 CSS */
+@media all and (min-width: 1024px) {}

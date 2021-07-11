@@ -1,0 +1,363 @@
+/*
+community_write.css
+*/
+
+/* 모바일용 CSS */
+.main_section {
+  width: 100%;
+  height: auto;
+  background: #000;
+}
+
+.main_img {
+  position: relative;
+}
+
+.main_img img {
+  display: block;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.aside {
+  display: none;
+}
+
+
+
+/* write_section 영역 */
+
+.contents {
+  width: 100%;
+  padding: 50px 0;
+  box-sizing: border-box;
+}
+
+
+.write_section {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 30px 5px;
+  box-sizing: border-box;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+
+.write_section h2 {
+  width: 100%;
+  padding: 3px 0;
+  padding-left: 10px;
+  box-sizing: border-box;
+  border-bottom: 1px solid #000;
+}
+
+
+.write_section .wr_form {
+  width: 100%;
+  margin: 10px auto;
+  font-size: 0.75rem;
+  padding: 20px 5px;
+  padding-bottom: 30px;
+  box-sizing: border-box;
+  background: #eee;
+}
+
+.wr_form input{
+  outline: 0;
+  border-radius: 3px;
+  border: 1px solid #585859;
+  padding-left: 10px;
+  box-sizing: border-box;
+}
+
+
+.wr_form .auth_nm,
+.wr_form .email {
+  width: 98%;
+  margin: 5px auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.wr_form .auth_nm label,
+.wr_form .email label {
+  width: 14%;
+  height: 28px;
+  line-height: 28px;
+}
+
+.wr_form .auth_nm input,
+.wr_form .email input {
+  width: 85%;
+  height: 28px;
+  line-height: 28px;
+  font-size: 0.75rem;
+}
+
+.wr_form .title {
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  margin: 10px auto;
+
+}
+
+.wr_form .title input {
+  display: block;
+  width: 98%;
+  height: 34px;
+  line-height: 34px;
+  font-size: 0.875rem;
+  font-weight: bold;
+  margin: 10px auto;
+}
+
+
+.wr_form .content textarea {
+  display: block;
+  width: 98%;
+  height: 300px;
+  margin: 10px auto;
+  outline: 0;
+  padding: 20px;
+  box-sizing: border-box;
+  font-size: 0.75rem;
+  outline: 0;
+  border-radius: 3px;
+  border: 1px solid #585859;
+}
+
+.wr_form .file {
+  margin-left: 1%;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.wr_form .file input {
+  font-size: 0.75rem;
+  border: 0;
+  margin: 0;
+  padding-left: 2px;
+}
+
+input[id="file"] + label {
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+  line-height: 20px;
+	border: 2px solid #bcbcbc;
+	cursor: pointer;
+  cursor: pointer;
+}
+
+.wr_form .file button {
+  width: 50px;
+  height: 23px;
+  border: 0;
+  border-radius: 5px;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+  font-size: 0.75rem;
+}
+.wr_form .file button:hover {
+  background: #3c3c3c;
+}
+
+.wr_form .file button:active {
+  opacity: .7;
+}
+
+
+.wr_form .lock_post {
+  width: 98%;
+  margin: 0 auto;
+  text-align: right;
+  vertical-align: middle;
+}
+
+.wr_form .lock_post #pwd {
+  width: 110px;
+  line-height: 20px;
+  padding-left: 10px;
+  box-sizing: border-box;
+  font-size: 0.75rem;
+}
+
+
+.wr_form .btns {
+  width: 300px;
+  margin: 0 auto;
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.wr_form .btns button {
+  width: 90px;
+  line-height: 28px;
+  margin: 0 3px;
+  font-size: 0.75rem;
+
+  background: #000;
+  border-radius: 5px;
+  border: 0;
+  color: #fff;
+  cursor: pointer;
+}
+
+.wr_form .btns button:hover {
+  background: #3b3b3b;
+}
+
+.wr_form .btns button:active {
+  opacity: .7;
+}
+
+
+
+
+
+
+/* 태블릿용 CSS */
+@media all and (min-width: 768px) {
+
+  /* aside */
+  .aside {
+    display: block !important;
+    width: 480px;
+    height: 60px;
+
+    position: absolute;
+    bottom: 4px;
+    left: 50%;
+    margin-left: -240px;
+  }
+
+  .aside li {
+    width: 160px;
+    line-height: 60px;
+    float: left;
+    font-size: 1rem;
+    text-align: center;
+    color: #fff;
+    text-shadow: 2px 2px 8px #000;
+  }
+
+  .aside li a {
+    display: block;
+    height: 100%;
+  }
+
+  .aside .on_menu {
+    display: block;
+    color: #e81a46;
+    font-weight: bold;
+  }
+
+  .aside .on_menu:after {
+    border-bottom: 4px solid #e81a46;
+    bottom: 0;
+    content: " ";
+    display: block;
+    margin: 0 auto;
+    width: 60%;
+  }
+
+  .aside .aside_menu {
+    display: block;
+  }
+
+  .aside .aside_menu:after {
+    border-bottom: 4px solid rgba(255, 255, 255, 0);
+    bottom: 0;
+    content: " ";
+    display: block;
+    margin: 0 auto;
+    -webkit-transition: all .28s ease-in-out;
+    transition: all .28s ease-in-out;
+    width: 0;
+  }
+
+  .aside .aside_menu:hover:after {
+    -webkit-transition: width 350ms ease-in-out;
+    transition: width 350ms ease-in-out;
+    width: 60%;
+
+    font-weight: bold;
+    border-bottom: 4px solid #e81a46;
+  }
+
+  .aside .aside_menu:hover {
+    color: #e81a46;
+    font-weight: bold;
+    transition: all .4s;
+  }
+
+
+
+
+
+
+  /* write_section 영역 */
+  .write_section .wr_form {
+    padding: 30px 2%;
+    padding-bottom: 50px;
+    font-size: 0.75rem;
+  }
+
+  .wr_form .auth_nm {
+    width: 48%;
+    float: left;
+    margin-left: 1%;
+  }
+
+  .wr_form .email {
+    width: 48%;
+    float: right;
+    margin-right: 1%;
+  }
+
+  .wr_form .title {
+    width: 100%;
+    float: left;
+    margin: 15px auto;
+    padding: 5px 0;
+    box-sizing: border-box;
+  }
+
+  .wr_form .title input {
+    height: 36px;
+    line-height: 36px;
+  }
+
+  .wr_form .file {
+    width: 100%;
+    float: left;
+  }
+
+  .wr_form .content {
+    width: 100%;
+    float: left;
+  }
+  
+  .wr_form .lock_post {
+    width: 100%;
+    float: right;
+    margin-right: 2%;
+  }
+
+
+  .wr_form .btns {
+    margin-top: 30px
+  }
+
+
+
+
+}
+
+/* PC용 CSS */
+@media all and (min-width: 1024px) {}

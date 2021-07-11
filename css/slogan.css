@@ -1,0 +1,36 @@
+/*
+CSS Document
+00-slogan
+*/
+
+/* 모바일용 CSS*/
+/* 슬로건 폼 CSS */
+.slogan {
+  width: 100%;
+  max-width: 900px;
+  position: relative;
+  margin: 40px auto;
+}
+
+.slogan p img {
+  display: block;
+  width: 80%;
+  margin: 0 auto;
+
+}
+
+
+/* 태블릿용 CSS */
+@media all and (min-width: 768px) {}
+
+
+
+/* PC용 CSS */
+@media all and (min-width: 1024px) {
+
+  /* 슬로건 영역 */
+  .slogan {
+    margin-top: 80px;
+  }
+
+}

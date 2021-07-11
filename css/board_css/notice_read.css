@@ -1,0 +1,598 @@
+/*
+CSS Document
+notice_read
+*/
+
+
+/* 모바일용 CSS */
+
+/* 메인 img 영역 CSS  */
+.main_section {
+  width: 100%;
+  height: auto;
+  background: #000;
+}
+
+.main_img {
+  position: relative;
+}
+
+.main_img img {
+  display: block;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.aside {
+  display: none;
+}
+
+
+/* notice 영역 CSS */
+.notice_read_section {
+  width: 100%;
+  margin: 0 auto;
+  padding: 30px 5%;
+  box-sizing: border-box;
+  text-align: center;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* 공지사항 테이블 CSS */
+.notice_read {
+  width: 100%;
+  max-width: 750px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.notice_tit {
+  width: 100%;
+}
+
+.notice_tit h2 {
+  font-size: 1.5rem;
+  margin: 10px auto;
+  text-decoration: underline;
+}
+
+.notice_tit ul {
+  margin-top: 40px;
+}
+
+.notice_tit li {
+  float: left;
+  font-size: 0.75rem;
+  color: #8c8c8c;
+  margin: 0 10px;
+}
+
+.notice_desc {
+  margin: 10px auto;
+  padding: 20px 20px;
+  padding-bottom: 40px;
+  box-sizing: border-box;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  font-size: 0.875rem;
+}
+
+.notice_desc .upload_file {
+  text-align: right;
+  font-size: 0.75rem;
+  margin-bottom: 20px;
+
+}
+
+.notice_desc img {
+  display: block;
+  margin: 30px auto;
+  /* max-width: 80%; */
+}
+
+.notice_con {
+  margin-top: 20px;
+}
+
+.notice_read button {
+  width: 80px;
+  line-height: 26px;
+  font-size: 0.75rem;
+  background: #000;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.notice_read button:hover {
+  background: #3b3b3b;
+}
+
+.notice_read button:active {
+  opacity: 0.7;
+}
+
+.notice_read .list_btn {
+  float: right;
+}
+
+.notice_read .edit_btn,
+.notice_read .del_btn {
+  float: left;
+  margin-right: 3px;
+}
+
+
+
+/* 댓글 수정하기 & 삭제하기 모달 창 */
+#notice_del_modal {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, .5);
+
+  z-index: 1;
+  display: none;
+}
+
+#notice_del_modal.active {
+  display: block;
+}
+
+#notice_del_modal .del_modal_body {
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
+  padding: 30px 30px;
+  box-sizing: border-box;
+  background: #fff;
+  border-top: 6px solid #eee;
+  border-bottom: 6px solid #eee;
+
+  text-align: center;
+  position: relative;
+  top: 30%;
+}
+
+
+#notice_del_modal .del_modal_body form {
+  width: 70%;
+  margin: 0 auto;
+}
+
+#notice_del_modal .del_modal_body #pwd {
+  display: block;
+  width: 60%;
+  height: 20px;
+  float: left;
+  outline: 0;
+}
+
+#notice_del_modal .del_modal_body .del_btn {
+  display: block;
+  width: 35%;
+  line-height: 20px;
+  float: right;
+}
+
+
+
+
+
+
+
+
+/* 댓글 입력 폼 */
+.cmnt_section {
+  width: 100%;
+  max-width: 750px;
+  margin: 30px auto;
+  margin-bottom: 60px;
+  
+
+  border-top: 6px solid #eee;
+  position: relative;
+}
+
+.cmnt_section .cm_input {
+  width: 100%;
+  padding: 0 5px;
+  margin: 20px 0;
+  box-sizing: border-box;
+  /* align-items: center;
+  vertical-align: middle; */
+}
+
+.cm_input label {
+  font-size: 0.75rem;
+  line-height: 22px;
+  padding-left: 10px;
+  box-sizing: border-box;
+  display: none;
+}
+
+.cm_input textarea {
+  display: block;
+  width: 80%;
+  margin: 0px auto;
+  height: 32px;
+  outline: none;
+  background: #eee;
+  border: 1px solid #8c8c8c;
+  border-radius: 5px 0 0 5px;
+
+  padding: 8px;
+  box-sizing: border-box;
+
+  float: left;
+}
+
+
+.cm_input .rep_btn {
+  width: 20%;
+  line-height: 28px;
+  font-size: 0.75rem;
+  background: #fff;
+  color: #000;
+  border: 1px solid #8c8c8c;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  float: right;
+}
+
+.cm_input .rep_btn:hover {
+  color: #e81a46;
+  border: 1px solid #e81a46;
+}
+
+.cm_input .rep_btn:active {
+  opacity: .7;
+}
+
+
+/* 댓글 리스트 영역 */
+.cmnt_section .cmnt_table {
+  width: 100%;
+  font-size: 0.75rem;
+  position: relative;
+}
+
+.cmnt_table table {
+  width: 98%;
+  margin: 0 auto;
+}
+
+.cmnt_table td {
+  padding: 10px;
+  box-sizing: border-box;
+  vertical-align: middle;
+  border-bottom: 1px solid #eee;
+}
+
+
+.cmnt_table td:first {
+  width: 30%;
+}
+
+.cmnt_td {
+  width: 70%;
+}
+
+.cmnt_table .cm_user {
+  display: block;
+  font-weight: bold;
+}
+
+.cmnt_table .cm_date {
+  font-size: 0.5rem;
+  color: #8c8c8c;
+}
+
+.cmnt_table .cm_user_btns {
+  position: absolute;
+  top: 18px;
+  right: 10px;
+}
+
+.cmnt_table .cm_edit_btn,
+.cmnt_table .cm_del_btn {
+  display: inline-block;
+  width: 40px;
+  height: 23px;
+  text-decoration: underline;
+  border: none;
+  background: #fff;
+  font-size: 0.75rem;
+
+  cursor: pointer;
+}
+
+.cmnt_table .cm_edit_btn:hover,
+.cmnt_table .cm_del_btn:hover {
+  color: #e81a46;
+}
+
+
+/* 댓글 수정하기 & 삭제하기 모달 창 */
+#cm_edit_modal,
+#cm_del_modal {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, .5);
+
+  z-index: 1;
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+  display: none;
+}
+
+#cm_edit_modal.active,
+#cm_del_modal.active {
+  display: block;
+}
+
+#cm_edit_modal .edit_modal_body,
+#cm_del_modal .del_modal_body {
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
+  padding: 30px 30px;
+  box-sizing: border-box;
+  background: #fff;
+  border-top: 6px solid #eee;
+  border-bottom: 6px solid #eee;
+
+  text-align: center;
+  position: relative;
+  top: 30%;
+}
+
+.edit_modal_body h3,
+.del_modal_body h3 {
+  width: 100%;
+  line-height: 40px;
+  border-bottom: 1px solid #000;
+  margin: 0px auto;
+  margin-bottom: 20px;
+}
+
+.edit_modal_body form {
+  width: 100%;
+  /* display: flex;
+  flex-flow: row wrap; */
+}
+
+.edit_modal_body #cm_pwd {
+  width: 130px;
+  float: left;
+  margin-bottom: 10px;
+  outline: 0;
+}
+
+.edit_modal_body #cmnt {
+  width: 78%;
+  height: 34px;
+  float: left;
+  outline: 0;
+  border: 1px solid #585859;
+  border-radius: 5px;
+  padding: 2px;
+  box-sizing: border-box;
+}
+
+.edit_modal_body .edit_btn {
+  width: 21%;
+  height: 34px;
+  line-height: 34px;
+  float: right;
+  border: 0;
+  border-radius: 5px;
+  color: #fff;
+  background:#000;
+  cursor: pointer;
+}
+
+.edit_modal_body .edit_btn:hover {
+  background: #3c3c3c;
+}
+
+.edit_modal_body .edit_btn:active {
+  opacity: .7;
+}
+
+.edit_modal_body .close_btn,
+.del_modal_body .close_btn {
+  width: 20px;
+  height: 20px;
+  background: url('../../images/main/close.png') no-repeat center;
+  background-size: 20px;
+  text-indent: -9999px;
+
+  border: none;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+
+  cursor: pointer;
+}
+
+.edit_modal_body .close_btn:hover,
+.del_modal_body .close_btn:hover {
+  background: url('../../images/main/close-p.png') no-repeat center;
+  background-size: 20px;
+}
+
+#cm_del_modal .del_modal_body .del_btn {
+  display: block;
+  width: 35%;
+  line-height: 30px;
+  margin: 0 auto;
+  border: 0;
+  background: #000;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#cm_del_modal .del_modal_body .del_btn:hover {
+  background: #3c3c3c;
+}
+
+#cm_del_modal .del_modal_body .del_btn:active {
+  opacity: .7;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 태블릿용 CSS */
+@media all and (min-width: 768px) {
+
+
+  /* aside */
+  .aside {
+    display: block !important;
+    width: 480px;
+    height: 60px;
+
+    position: absolute;
+    bottom: 4px;
+    left: 50%;
+    margin-left: -240px;
+  }
+
+  .aside li {
+    width: 160px;
+    line-height: 60px;
+    float: left;
+    font-size: 1rem;
+    text-align: center;
+    color: #fff;
+    text-shadow: 2px 2px 8px #000;
+  }
+
+  .aside li a {
+    display: block;
+    height: 100%;
+  }
+
+  .aside .on_menu {
+    display: block;
+    color: #e81a46;
+    font-weight: bold;
+  }
+
+  .aside .on_menu:after {
+    border-bottom: 4px solid #e81a46;
+    bottom: 0;
+    content: " ";
+    display: block;
+    margin: 0 auto;
+    width: 60%;
+
+  }
+
+  .aside .aside_menu {
+    display: block;
+  }
+
+  .aside .aside_menu:after {
+    border-bottom: 4px solid rgba(255, 255, 255, 0);
+    bottom: 0;
+    content: " ";
+    display: block;
+    margin: 0 auto;
+    -webkit-transition: all .28s ease-in-out;
+    transition: all .28s ease-in-out;
+    width: 0;
+  }
+
+  .aside .aside_menu:hover:after {
+    -webkit-transition: width 350ms ease-in-out;
+    transition: width 350ms ease-in-out;
+    width: 60%;
+
+    font-weight: bold;
+    border-bottom: 4px solid #e81a46;
+  }
+
+  .aside .aside_menu:hover {
+    color: #e81a46;
+    font-weight: bold;
+    transition: all .4s;
+  }
+
+
+
+  .notice_post_section h2 {
+    font-size: 2.375rem;
+  }
+
+  .notice_table thead tr th:first-child,
+  .notice_table thead tr th:nth-child(3),
+  .notice_table thead tr th:nth-child(4),
+  .notice_table tbody tr td:first-child,
+  .notice_table tbody tr td:nth-child(3),
+  .notice_table tbody tr td:nth-child(4) {
+    display: table-cell;
+  }
+
+  .notice_table .notice_tit {
+    padding-left: 20px;
+    text-align: left;
+  }
+
+  .notice_table thead tr th:first-child {
+    width: 13%;
+  }
+
+  .notice_table thead tr th:nth-child(2) {
+    width: 51%;
+  }
+
+  .notice_table thead tr th:nth-child(3) {
+    width: 18%;
+  }
+
+  .notice_table thead tr th:nth-child(4) {
+    width: 18%;
+  }
+
+
+
+}
+
+
+
+
+
+/* PC용 CSS */
+@media all and (min-width: 1024px) {
+
+  .notice_table h2 {
+    font-size: 2.75rem;
+  }
+}

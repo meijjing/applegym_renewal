@@ -1,0 +1,537 @@
+/*
+CSS Document
+join.css
+*/
+
+
+/* 모바일용 CSS */
+
+/* 회원가입 폼 CSS */
+
+.join_section {
+  width: 100%;
+  height: 100%;
+  background: url('../../images/02-join/join_bg.png') repeat top;
+  background-size: 100%;
+
+  text-align: center;
+  padding: 50px 0;
+  box-sizing: border-box;
+}
+
+.join_section h2 {
+  color: #fff;
+  font-size: 2.250rem;
+  text-shadow: 1px 1px 2px rgba(232, 26, 70, .9);
+  font-weight: normal;
+}
+
+.join_section .join_pg {
+  width: 80%;
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 30px 0;
+  box-sizing: border-box;
+  background: rgba(225, 225, 225, .9);
+
+  position: relative;
+}
+
+.join_pg h3 {
+  color: #e81a46;
+  font-size: 1.875rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, .5);
+  margin-top: 20px;
+}
+
+.join_pg>p {
+  font-size: 0.75rem;
+  color: #585859;
+}
+
+.join_form {
+  width: 90%;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.join_form fieldset {
+  margin: 30px auto;
+  margin-bottom: 0;
+  font-size: 0.625rem;
+  color: #e81a46;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.join_form fieldset p {
+  width: 100%;
+  margin: 10px 0;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
+
+.join_form fieldset .mem_pwd {
+  margin-bottom: 0;
+}
+
+.join_form fieldset .re_pwd {
+  margin-top: 0;
+}
+
+.join_form fieldset label {
+  width: 100%;
+  display: block;
+  /* float: left; */
+}
+
+.join_form fieldset input {
+  display: block;
+  width: 100%;
+  height: 40px;
+  margin: 5px 0;
+  border: 0;
+  border-bottom: 2px solid #585859;
+  border-radius: 8px 8px 0 0;
+  padding-left: 15px;
+  box-sizing: border-box;
+  outline: none;
+  color: #8c8c8c;
+  background: linear-gradient(#fff, rgb(230, 230, 230));
+  font-size: 0.688rem;
+  transition: .3s ease-in-out;
+}
+
+.join_form fieldset .star {
+  color: #e81a46;
+  font-size: 0.875rem;
+  margin: 0 3px;
+}
+
+/* .join_form .mem_id {
+  display: flex;
+  justify-content: space-between;
+} */
+
+
+.join_form .mem_id input,
+.join_form .tel_no input,
+.join_form #postal_code {
+  width: 70%;
+  border-radius: 8px 0 0 0;
+  /* float: left; */
+}
+
+.join_form fieldset input:active,
+.join_form fieldset input:focus {
+  border-bottom: 2px solid #e81a46;
+  color: #000;
+}
+
+.join_form fieldset label {
+  margin-left: 10px;
+  font-size: 0.75rem;
+  color: #000;
+  font-family: Jua;
+  
+  /* font-weight: bold; */
+}
+
+.join_form .mem_nm {
+  width: 66%;
+  margin-right: 4%;
+}
+
+.join_form .male_flg {
+  width: 30%;
+}
+
+.join_form #male_flg {
+  width: 100%;
+  height: 40px;
+  outline: 0;
+  display: block;
+  margin: 5px 0;
+  padding-left: 15px;
+  box-sizing: border-box;
+  border: 0;
+  border-bottom: 2px solid #585859;
+  border-radius: 8px 8px 0 0;
+  color: #585859;
+  background: linear-gradient(#fff, rgb(230, 230, 230));
+  font-size: 0.875em;
+}
+
+.join_form .btn_id_check,
+.join_form .tel_no button,
+.join_form .address button {
+  width: 30%;
+  height: 40px;
+  line-height: 40px;
+  /* border: 0; */
+  font-size: 0.75em;
+  margin: 5px 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: 0;
+  border-radius: 0 8px 0 0;
+  color: #fff;
+
+  text-transform: uppercase;
+  transition: 0.5s ease-in-out;
+  background-size: 200% auto;
+
+  text-shadow: 0 1px 1px rgba(0, 0, 0, .3);
+  background-image: linear-gradient(to right, rgb(32, 30, 34) 0%, #e81a46 52%, rgb(32, 30, 34) 100%)
+}
+
+
+.join_form .btn_id_check:hover,
+.join_form .tel_no button:hover,
+.join_form .address button:hover {
+  background-position: right center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.join_form .btn_id_check:active,
+.join_form .tel_no button:active,
+.join_form .address button:active {
+  opacity: 0.7;
+}
+
+.join_form .mem_id input:invalid,
+.join_form .mem_pwd input:invalid,
+.join_form .re_pwd input:invalid {
+  background: rgba(255, 41, 87, 0.3);
+}
+
+.join_form span {
+  font-size: 0.625rem;
+}
+
+
+.join_form .email_con {
+  width: 100%;
+  justify-content: space-between;
+}
+
+
+.join_form .email_con input {
+  width: 30%;
+}
+
+.join_form .email_con select {
+  display: block;
+  float: right;
+  width: 31%;
+  height: 40px;
+  margin: 5px 0;
+  margin-left: 1%;
+  padding-left: 15px;
+  box-sizing: border-box;
+  border: 0;
+  outline: 0;
+  border-bottom: 2px solid #585859;
+  border-radius: 8px 8px 0 0;
+  background: linear-gradient(#fff, rgb(230, 230, 230));
+  font-size: 0.875em;
+  color: #585859;
+}
+
+.join_form .email_con span {
+  display: block;
+  width: 8%;
+  height: 40px;
+  line-height: 40px;
+  margin: 5px 0;
+  text-align: center;
+  font-size: 1.25em;
+  font-weight: bold;
+}
+
+.join_form .address label {
+  margin-top: 5px;
+}
+
+
+.join_form .agree {
+  width: 100%;
+  margin-top: 20px;
+  position: relative;
+}
+
+
+.join_form .agree input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0
+}
+
+.agree input[type="checkbox"]+label {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.agree input[type="checkbox"]+label:before {
+  content: ' ';
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  margin: -2px 8px 0 0;
+  text-align: center;
+  vertical-align: middle;
+  background: #fafafa;
+  border: 1px solid #cacece;
+  border-radius: 3px;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
+}
+
+.agree input[type="checkbox"]+label:active:before,
+.agree input[type="checkbox"]:checked+label:active:before {
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05), inset 0px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.agree input[type="checkbox"]:checked+label:before {
+  content: '\2713';
+  color: #e81a46;
+  /* text-shadow: 1px 1px white; */
+  background: #f1f4ff;
+  border-color: #e81a46;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
+}
+
+.join_form .agree label {
+  width: 100%;
+  height: 22px;
+  line-height: 22px;
+}
+
+
+.join_form .join_btn {
+  text-align: center;
+}
+
+.join_form .join_btn button {
+  display: block;
+  margin: 20px auto;
+  border: 0;
+  outline: 0;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1.125rem;
+  padding: 14px 70px;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, .3);
+
+  border-radius: 20em;
+  -webkit-border-radius: 20em;
+  -moz-border-radius: 20em;
+
+
+  box-shadow: -3px -3px 5px rgba(228, 226, 226, .8), 3px 3px 6px rgba(0, 0, 0, .3);
+  -webkit-box-shadow: -3px -3px 5px rgba(228, 226, 226, .8), 3px 3px 6px rgba(0, 0, 0, .3);
+  -moz-box-shadow: -3px -3px 5px rgba(228, 226, 226, .8), 3px 3px 6px rgba(0, 0, 0, .3);
+
+
+  color: #fef4e9;
+  
+  transition: .5s ease-in-out;
+
+
+  background: #e81a46;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #f36c6c 0%, #f97070 29%, #e81a46 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #f36c6c 0%, #f97070 29%, #e81a46 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #f36c6c 0%, #f97070 29%, #e81a46 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f36c6c', endColorstr='#e81a46', GradientType=0);
+  /* IE6-9 */
+
+}
+
+.join_form .join_btn button:hover {
+  background: #e81a46;
+  background: -moz-linear-gradient(top, #ff5454 1%, #f44444 47%, #d81a1d 100%);
+  background: -webkit-linear-gradient(top, #ff5454 1%, #f44444 47%, #d81a1d 100%);
+  background: linear-gradient(to bottom, #ff5454 1%, #f44444 47%, #d81a1d 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff5454', endColorstr='#d81a1d', GradientType=0);
+}
+
+.join_form .join_btn button:active {
+  color: #f8b5b0;
+
+  box-shadow: inset -3px -2px 2px rgba(225, 225, 225, .2), inset 8px 0px 16px rgba(0, 0, 0, .1);
+
+  background: #e81a46;
+  background: -moz-linear-gradient(bottom, #f36c6c 0%, #eb5050 29%, #e81a46 100%);
+  background: -webkit-linear-gradient(bottom, #f36c6c 0%, #eb5050 29%, #e81a46 100%);
+  background: linear-gradient(to top, #f36c6c 0%, #eb5050 29%, #e81a46 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f36c6c', endColorstr='#e81a46', GradientType=0);
+}
+
+
+.join_form .close_btn button {
+  width: 30px;
+  height: 30px;
+
+  background: url('../../images/main/close-g.png') no-repeat center;
+  background-size: 25px;
+  text-indent: -9999px;
+  border: 0;
+
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.join_form .close_btn button:hover {
+  background: url('../../images/main/close-p.png') no-repeat center;
+  background-size: 25px;
+}
+
+.join_form .close_btn button:active {
+  background: url('../../images/main/close-g.png') no-repeat center;
+  background-size: 25px;
+}
+
+
+
+
+
+/* 태블릿용 CSS */
+@media all and (min-width: 768px) {
+
+
+  .join_pg h3 {
+    font-size: 2.25em;
+  }
+
+  .join_form {
+    width: 70%;
+  }
+
+  .join_form fieldset {
+    font-size: 0.875rem;
+  }
+
+  .join_form fieldset input {
+    font-size: 0.75rem;
+  }
+
+}
+
+
+
+/* PC용 CSS */
+@media all and (min-width: 1024px) {
+
+  .join_pg h3 {
+    font-size: 2.5em;
+  }
+
+  /* .join_form {
+    width: 60%;
+    padding-top: 30px;
+  } */
+
+  /* .join_form fieldset {
+    font-size: 0.750em;
+  } */
+
+  .join_form fieldset p {
+    margin: 15px auto;
+  }
+
+  .join_form fieldset label {
+    font-size: 0.875rem;
+  }
+
+  .join_form fieldset input {
+    height: 50px;
+    line-height: 50px;
+    /* font-size: 0.875rem; */
+  }
+
+  .join_form fieldset span {
+    font-size: 0.75rem;
+  }
+
+  /* .join_form fieldset label {
+    font-size: 1rem;
+  } */
+
+  .join_form #male_flg {
+    height: 50px;
+  }
+
+  .join_form .btn_id_check,
+  .join_form .tel_no button,
+  .join_form .address button {
+    width: 150px;
+    height: 50px;
+    padding: 0 25px;
+    /* font-size: 0.875rem; */
+  }
+
+
+  .join_form .email_con select {
+    height: 50px;
+    /* font-size: 0.875rem; */
+  }
+
+  .join_form .email_con span {
+    height: 50px;
+    line-height: 50px;
+  }
+
+  .join_form .mem_id label,
+  .join_form .mem_pwd label,
+  .join_form .re_pwd label,
+  .join_form .tel_no label,
+  .join_form .birth label {
+    width: 90px!important;
+  }
+
+  .join_form .mem_id input,
+  .join_form .mem_pwd input,
+  .join_form .re_pwd input,
+  .join_form .tel_no input,
+  .join_form .birth input {
+    width: calc(100% - 100px);
+  }
+
+  .join_form .mem_id input,
+  .join_form .tel_no input {
+    width: calc(100% - 250px);
+  }
+
+  .join_form #postal_code {
+    width: calc(100% - 150px);
+  }
+
+  .join_form .err {
+    margin-left: 100px;
+  }
+
+
+
+
+
+
+
+}

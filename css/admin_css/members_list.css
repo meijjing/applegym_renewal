@@ -1,0 +1,258 @@
+/*
+members_list.css
+*/
+
+/* list_section 영역 */
+
+.list_section {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 30px 5px;
+  box-sizing: border-box;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.list_section h2 {
+  width: 50%;
+  padding: 3px 0;
+  padding-left: 10px;
+  box-sizing: border-box;
+  border-bottom: 1px solid #000;
+}
+
+.list_section h3 {
+  width: 50%;
+  text-align: right;
+  padding: 3px 0;
+  padding-right: 10px;
+  box-sizing: border-box;
+  border-bottom: 1px solid #000;
+}
+
+.list_section .mem_list_table {
+  width: 100%;
+  margin: 10px auto;
+  border-bottom: 1px solid #8c8c8c;
+  font-size: 0.75rem;
+  text-align: center;
+
+  table-layout: fixed;
+}
+
+.mem_list_table thead {
+  background: #000;
+  color: #fff;
+  font-weight: bold;
+  width: 100%;
+}
+
+.mem_list_table thead tr {
+  width: 100%;
+}
+
+.mem_list_table tr th {
+  border: 1px solid #999;
+  vertical-align: middle;
+  height: 34px;
+}
+
+
+.mem_list_table tbody td {
+  height: 32px;
+  line-height: 32px;
+  line-height: 1.5;
+  padding: 3px 8px;
+  box-sizing: border-box;
+
+  vertical-align: middle;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.mem_list_table tbody:nth-child(2n+1) {
+  background: #eee;
+}
+
+.mem_idx,
+.email,
+.birth,
+.addr,
+.mem_reg_date {
+  display: none;
+}
+
+.mem_no {
+  width: 10%
+}
+
+.mem_nm {
+  width: 15%;
+}
+
+.male_flg {
+  width: 10%;
+}
+
+.mem_id {
+  width: 20%;
+}
+
+.tel_no {
+  width: 25%;
+}
+
+.edit {
+  width: 10%;
+}
+
+.delete {
+  width: 10%;
+}
+
+.email_desc,
+.addr_desc {
+  text-align: left;
+}
+
+.edit_btn,
+.del_btn {
+  text-decoration: underline;
+}
+
+.edit_btn:hover,
+.del_btn:hover {
+  font-weight: bold;
+}
+
+.pager {
+  width: 100%;
+  margin: 15px auto;
+  text-align: center;
+  font-size: 0.75rem;
+}
+
+.pager a {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  background: #eee;
+  border-radius: 10px;
+  margin: 0 2px;
+  transition: all .3s;
+}
+
+.pager .list_prev_btn {
+  width: 30px;
+  height: 30px;
+  background: url('../../images/07-branch/prev_btn.png') no-repeat center;
+  background-size: auto 30px;
+  text-indent: -9999px;
+
+  margin-right: 10px;
+  transition: all .3s;
+}
+
+.pager .list_next_btn {
+  width: 30px;
+  height: 30px;
+  background: url('../../images/07-branch/next_btn.png') no-repeat center;
+  background-size: auto 30px;
+  text-indent: -9999px;
+
+  margin-left: 10px;
+  transition: all .3s;
+}
+
+.pager a:hover {
+  transform: scale(1.1);
+}
+
+.pager a:active {
+  opacity: .6;
+}
+
+.pager .num_btn {
+  box-shadow: inset -2px -2px 4px rgba(125, 125, 125, .3);
+}
+
+.pager .num_btn:hover {
+  opacity: .6;
+  color: #e81a46
+}
+
+.pager .num_btn:active {
+  box-shadow: inset 2px 2px 4px rgba(125, 125, 125, .3);
+}
+
+
+
+
+
+/* 태블릿용 CSS */
+@media all and (min-width: 768px) {
+
+  /* list_section 영역 */
+
+  .mem_idx,
+  .email,
+  .birth,
+  .addr,
+  .mem_reg_date {
+    display: table-cell !important;
+  }
+
+  .mem_no {
+    width: 3%;
+  }
+
+  .mem_nm {
+    width: 8%;
+  }
+
+  .male_flg {
+    width: 4%;
+  }
+
+  .mem_id {
+    width: 9%;
+  }
+
+  .tel_no {
+    width: 11%;
+  }
+
+  .email {
+    width: 16%;
+  }
+
+  .birth {
+    width: 10%;
+  }
+
+  .addr {
+    width: 19%;
+  }
+
+  .mem_reg_date {
+    width: 10%;
+  }
+
+  .edit {
+    width: 5%;
+  }
+
+  .delete {
+    width: 5%;
+  }
+
+
+
+
+}
+
+/* PC용 CSS */
+@media all and (min-width: 1024px) {}

@@ -1,0 +1,442 @@
+/*
+CSS Document
+08-program
+*/
+
+.divider {
+  width: 10%;
+  height: 6px;
+  border-radius: 50px;
+  background: #e81a46;
+  margin: 80px auto;
+}
+
+/* 모바일용 CSS */
+
+/* 메인이미지 영역 CSS */
+
+.main_section {
+  width: 100%;
+  height: auto;
+  background: #000;
+}
+
+.main_img img {
+  display: block;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+/* contents 영역 CSS */
+.contents {
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 30px;
+
+}
+
+
+/* gym 애니메이션 영역 CSS */
+.gym-section {
+  width: 90%;
+  max-width: 1100px;
+  height: 35vh;
+  margin: 0 auto;
+
+  position: relative;
+}
+
+.gym-section h3 {
+  width: 100%;
+  height: 32vh;
+  background: url('../../images/08-program/fitness2.jpg') no-repeat right bottom;
+  background-size: 300px;
+  text-indent: -9999px;
+
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.gym-section p {
+  width: 100%;
+  padding: 30px 20px;
+  display: block;
+
+}
+
+
+.gym_title {
+  display: block;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.gym_title img {
+  width: 80%;
+  max-width: 330px;
+}
+
+
+.gym_con {
+  display: block;
+  width: 90%;
+  text-shadow: -1px 0 #fff, 0 1px #fff, 1px 0 #fff, 0 -1px #fff;
+  font-size: 0.75rem;
+  line-height: 1.8;
+}
+
+
+
+/* 프로그램 영역 CSS */
+.program-section {
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.program-section section {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  padding: 30px 0;
+  box-sizing: border-box;
+  /* box-shadow: 0px 10px 10px rgba(0, 0, 0, .5); */
+}
+
+
+/* fitness */
+
+.fitness img {
+  display: block;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+
+
+/* pt - 이미지 */
+
+.pt img {
+  display: block;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+
+/* pt - 대한스포츠 */
+
+.pt_con1 {
+  padding: 20px 5%;
+  box-sizing: border-box;
+}
+
+.pt_con1 img {
+  display: block;
+  width: 50%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.pt_con1 p {
+  text-align: center;
+  line-height: 1.6;
+  margin: 20px auto;
+}
+
+
+/* pt - 추천 */
+
+.pt_con2 {
+  padding: 0px 5%;
+  box-sizing: border-box;
+}
+
+.pt_con2 img {
+  display: block;
+  width: 40%;
+  max-width: 400px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.pt_con2 p {
+  width: 90%;
+  max-width: 500px;
+  margin: 0 auto;
+  height: 10vh;
+  background: url('../../images/08-program/pt_trainer1.png') no-repeat center;
+  background-size: 100%;
+
+  text-indent: -9999px;
+}
+
+.pt_con2 ul {
+  width: 90%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.pt_con2 li {
+  width: 90%;
+  margin: 0 auto;
+  box-sizing: border-box;
+  font-size: 0.75rem;
+  line-height: 2;
+  list-style-type: square;
+}
+
+/* pt - 프로세스 */
+.pt_process {
+  padding: 30px 5%;
+  box-sizing: border-box;
+}
+
+.pt_process img {
+  display: block;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+
+
+/* gx */
+
+.gx img {
+  display: block;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+
+/* gx - 추천 */
+.gx_con {
+  padding: 0px 5%;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.gx_con img {
+  display: block;
+  width: 60%;
+  max-width: 300px;
+  margin: 0 auto;
+
+  /* position: absolute;
+  top: 50px;
+  left: 250px; */
+}
+
+.gx_con p {
+  width: 90%;
+  max-width: 500px;
+  margin: 0 auto;
+  height: 10vh;
+  background: url('../../images/08-program/gx_group1.jpg') no-repeat center;
+  background-size: 100%;
+  text-indent: -9999px;
+
+  /* position: absolute;
+  left: 750px;
+  top: 50px */
+}
+
+.gx_con ul {
+  width: 90%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.gx_con li {
+  width: 90%;
+  margin: 0 auto;
+  line-height: 2;
+  list-style-type: square;
+  font-size: 0.75rem;
+}
+
+
+/* spinning */
+.spinning img {
+  display: block;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+
+/* pilates */
+.pilates img {
+  display: block;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* pilates - 추천 */
+.pilates_con {
+  padding: 20px 5%;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.pilates_con img {
+  display: block;
+  width: 60%;
+  max-width: 400px;
+  margin: 0 auto;
+
+  /* position: absolute;
+  top: 100px;
+  left: 210px; */
+}
+
+.pilates_con p {
+  width: 90%;
+  max-width: 500px;
+  height: 10vh;
+  margin: 0 auto;
+  background: url('../../images/08-program/pilates_title.png') no-repeat center;
+  background-size: 100%;
+  text-indent: -9999px;
+
+  /* position: absolute;
+  left: 800px;
+  top: 100px */
+}
+
+.pilates_con ul {
+  width: 90%;
+  max-width: 800px;
+  margin: 0 auto;
+
+
+  /* position: absolute;
+  left: 800px;
+  top: 200px */
+}
+
+.pilates_con li {
+  width: 90%;
+  margin: 0 auto;
+  line-height: 2;
+  list-style-type: square;
+  font-size: 00.75rem;
+}
+
+
+/* 반신욕 & 사우나 */
+
+.sauna img {
+  display: block;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 태블릿용 CSS */
+@media all and (min-width: 768px) {
+
+  .gym_con {
+    width: 85%;
+    font-size: 1rem;
+  }
+
+  /* fitness*/
+
+
+  /* pt */
+
+  .pt_con2 li,
+  .gx_con li,
+  .pilates_con li {
+    margin-left: 100px;
+    font-size: 1rem;
+  }
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+/* PC용 CSS */
+@media all and (min-width: 1024px) {
+
+
+  /* gym-section */
+
+  
+
+  .gym-section p {
+    padding: 50px 40px;
+    /* height: 38vh; */
+  }
+
+  .gym_title {
+    margin-bottom: 30px;
+  }
+
+  
+
+  .gym-section h3 {
+    height: 35vh;
+    background-size: 400px;
+  }
+
+
+  /* pt */
+  .pt_con1 {
+    padding-top: 50px;
+  }
+
+  .pt_con1 p {
+    margin: 40px auto;
+  }
+
+  .pt_con2 li,
+  .gx_con li,
+  .pilates_con li {
+    font-size: 1.25rem;
+  }
+
+  .pt_process {
+    padding: 50px 5%;
+  }
+
+
+
+}

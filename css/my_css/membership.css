@@ -1,0 +1,402 @@
+/*
+CSS Document
+membership.css
+*/
+
+
+/* 모바일용 CSS */
+
+/* 메인 영역 CSS */
+.main_section {
+  width: 100%;
+}
+
+.main_section .main_img img {
+  display: block;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* 콘텐츠 영역 CSS */
+
+.contents {
+  width: 100%;
+  background: #000;
+  background: -moz-linear-gradient(top, #000 0%, #000 29%, #e81a46 100%);
+  background: -webkit-linear-gradient(top, #000 0%, #000 29%, #e81a46 100%);
+  background: linear-gradient(to bottom, #000 0%, #000 29%, #e81a46 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#000', endColorstr='#e81a46', GradientType=0);
+  padding-bottom: 10px;
+}
+
+.mem_section {
+  width: 100%;
+  text-align: center;
+  padding: 60px 0;
+  box-sizing: border-box;
+}
+
+.mem_section h2 {
+  color: #fff;
+  font-size: 2.250em;
+  text-shadow: 1px 1px 2px rgba(232, 26, 70, .9);
+  font-weight: bold;
+}
+
+.mem_section>p {
+  width: 70%;
+  font-size: 0.625rem;
+  margin: 30px auto;
+  color: #d6d6d6;
+}
+
+.mem_section p strong {
+  display: block;
+  font-size: 0.875rem;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+
+.mem_section .mem_form {
+  width: 90%;
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 30px 0 20px 0;
+  text-align: left;
+  background: rgba(255, 255, 255, 1);
+
+  font-size: 0.875rem;
+  position: relative;
+}
+
+.mem_form fieldset {
+  width: 90%;
+  margin: 30px auto;
+  margin-bottom: 0;
+}
+
+.mem_form fieldset p {
+  float: left;
+  width: 100%;
+  margin: 10px auto;
+}
+
+.mem_form label {
+  margin-left: 10px;
+  font-weight: bold;
+}
+
+.mem_form select {
+  display: block;
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  margin: 5px 0;
+  border: 0;
+  outline: none;
+  border-bottom: 3px solid #585859;
+  border-radius: 8px 8px 0 0;
+  padding: 0 15px;
+  box-sizing: border-box;
+  
+  color: #8c8c8c;
+  background: #fff;
+  /* 네이티브 외형 감추기 */ 
+  /* -webkit-appearance: none; -moz-appearance: none; appearance: none; */
+}
+
+.mem_form select:after {
+  content: " ";
+  background: url('../../images/02-join/arrow-down-p.png');
+  background-size: 100px;
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  z-index: 10;
+}
+
+.mem_form select:focus,
+.mem_form select:active {
+  border-bottom: 3px solid #e81a46;
+  color: #000;
+}
+
+/* .mem_form select:valid {
+  border-bottom: 3px solid #e81a46;
+} */
+
+/* 
+.mem_form select[value()] {
+  color: #000;
+} */
+
+.mem_form option {
+  padding: 10px 0;
+}
+
+.mem_form .red {
+  display: inline-block;
+  color: red;
+  margin-left: 5px;
+}
+
+.mem_form .entry {
+  margin-bottom: 40px;
+}
+
+.mem_form .total {
+  width: 70%;
+  max-width: 350px;
+  text-align: center;
+
+  margin: 0 auto;
+  padding: 14px 0;
+  box-sizing: border-box;
+
+  display: flex;
+  justify-content: space-around;
+  border-radius: 8px 8px 0 0;
+  background-color: rgba(255, 255, 255, 1);
+  border-bottom: 3px solid #e81a46;
+}
+
+.mem_form .divider {
+  margin-top: 30px;
+  width: 100%;
+
+}
+
+.mem_form .payment {
+  width: 100%;
+}
+
+
+.mem_form .payment button {
+  display: block;
+  margin: 30px auto;
+  outline: none;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1.125rem;
+
+  width: 70%;
+  padding: 15px 50px;
+
+  text-shadow: 0 1px 1px rgba(0, 0, 0, .3);
+
+  -webkit-border-radius: 20em;
+  -moz-border-radius: 20em;
+  border-radius: 20em;
+
+  color: #fef4e9;
+  /* border: solid 1px #dd0a38; */
+  border: 0;
+
+
+  box-shadow: -4px -4px 5px rgba(228, 226, 226, .8), 4px 4px 7px rgba(0, 0, 0, .3);
+  -webkit-box-shadow: -4px -4px 5px rgba(228, 226, 226, .8), 4px 4px 7px rgba(0, 0, 0, .3);
+  -moz-box-shadow: -4px -4px 5px rgba(228, 226, 226, .8), 4px 4px 7px rgba(0, 0, 0, .3);
+
+
+
+  background: #e81a46;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #ff6c6c 0%, #ff3651 29%, #e81a46 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #f97f7f 0%, #ff3651 29%, #e81a46 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #ff6c6c 0%, #ff3651 29%, #e81a46 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff6c6c', endColorstr='#e81a46', GradientType=0);
+  /* IE6-9 */
+
+}
+
+.mem_form .payment button:hover {
+  background: #ff5454;
+  background: -moz-linear-gradient(top, #ff5454 1%, #f44444 47%, #d81a1d 100%);
+  background: -webkit-linear-gradient(top, #ff5454 1%, #f44444 47%, #d81a1d 100%);
+  background: linear-gradient(to bottom, #ff5454 1%, #f44444 47%, #d81a1d 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff5454', endColorstr='#d81a1d', GradientType=0);
+}
+
+.mem_form .payment button:active {
+  color: #ffa59f;
+
+  box-shadow: inset -4px -2px 5px rgba(225, 225, 225, .3), inset 8px 0px 16px rgba(0, 0, 0, .1);
+
+  background: #e81a46;
+  background: -moz-linear-gradient(top, #e81a46 0%, #ff3651 71%, #ff6c6c 100%);
+  background: -webkit-linear-gradient(top, #e81a46 0%, #ff3651 71%, #ff6c6c 100%);
+  background: linear-gradient(to bottom, #e81a46 0%, #ff3651 71%, #ff6c6c 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e81a46', endColorstr='#ff6c6c', GradientType=0);
+}
+
+/* .mem_form .payment button:hover {
+  background-position: right center;
+  
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+} */
+
+.mem_form .close_btn {
+  width: 30px;
+  height: 30px;
+
+  background: url('../../images/main/close-g.png') no-repeat center;
+  background-size: 25px;
+  text-indent: -9999px;
+  border: 0;
+
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.mem_form .close_btn:hover,
+.mem_form .close_btn:active {
+  background: url('../../images/main/close-p.png') no-repeat center;
+  background-size: 25px;
+}
+
+
+
+/* 사용자 메뉴얼 영역 CSS */
+.use_manual {
+  width: 100%;
+  color: #f4f2f1;
+  padding: 20px 0;
+  box-sizing: border-box;
+  background: #585859;
+}
+
+.use_manual ul {
+  width: 96%;
+  margin: 0 auto;
+  padding: 0 10px 0 30px;
+  box-sizing: border-box;
+}
+
+.use_manual ul li {
+  margin: 10px 0;
+
+  font-size: 0.625rem;
+  font-weight: 100;
+  line-height: 18px;
+  list-style-type: square;
+
+}
+
+
+
+
+/* 태블릿용 CSS */
+@media all and (min-width: 768px) {
+
+  .mem_section h2 {
+    font-size: 2.625em;
+  }
+
+  .mem_section>p {
+    font-size: 0.75rem;
+    margin: 30px auto;
+  }
+
+  .mem_section p strong {
+    font-size: 1.125rem;
+  }
+
+  .mem_form fieldset {
+    width: 80%;
+  }
+
+  .mem_form select {
+    padding-left: 20px;
+  }
+
+  .use_manual ul {
+    width: 90%;
+  }
+
+}
+
+
+
+
+
+/* PC용 CSS */
+@media all and (min-width: 1024px) {
+
+  .mem_section h2 {
+    font-size: 2.875rem;
+  }
+
+  .mem_section>p {
+    font-size: 0.875rem;
+  }
+
+  .mem_section p strong {
+    font-size: 1.25rem;
+  }
+
+  /* .mem_section .mem_form {
+    font-size: 1rem;
+  } */
+
+  .mem_form fieldset {
+    width: 90%;
+    position: relative;
+  }
+
+
+  .mem_form select {
+    width: 48%;
+    /* font-size: 0.875rem; */
+    height: 50px;
+    line-height: 50px;
+  }
+
+  .mem_form .divider {
+    width: 1px;
+    height: 85%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: 30px;
+
+
+  }
+
+  .mem_form .total {
+    width: 40%;
+    position: absolute;
+    top: 120px;
+    right: 0;
+  }
+
+  .mem_form .payment button {
+    width: 40%;
+    position: absolute;
+    right: 0;
+    top: 160px;
+  }
+
+  .mem_form .close_btn {
+    top: -40px;
+    right: -20px;
+  }
+
+
+  .use_manual ul {
+    width: 60%;
+
+  }
+
+
+
+}

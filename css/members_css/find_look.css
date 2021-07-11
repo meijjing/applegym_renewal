@@ -1,0 +1,364 @@
+/*
+CSS Document
+03-login
+*/
+
+/* 모바일용 CSS */
+
+/* contents */
+.contents {
+  width: 100%;
+}
+
+
+/* login */
+.login_pg {
+  width: 100%;
+  height: auto;
+  background: url('../../images/login_bg.jpg') repeat top;
+  background-size: 100%;
+
+  text-align: center;
+  padding: 40px 0;
+  box-sizing: border-box;
+}
+
+.login_pg h2 {
+  color: #fff;
+  font-size: 2.250em;
+  text-shadow: 1px 1px 2px rgba(232, 26, 70, .9);
+  margin-bottom: 40px;
+  font-weight: normal;
+}
+
+.login_body {
+  width: 90%;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, .9);
+  text-align: center;
+  padding: 30px 0;
+  box-sizing: border-box;
+}
+
+.login_body h3 {
+  font-weight: bold;
+  color: #e81a46;
+  font-size: 1.875em;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, .5);
+}
+
+.login_body .login_text {
+  font-size: 0.75em;
+  color: #585859;
+  margin-bottom: 20px;
+}
+
+
+/* login form */
+.login_body .login_form {
+  width: 90%;
+  margin: 10px auto;
+}
+
+.login_body .login_form fieldset {
+  width: 100%;
+  height: auto;
+  border: none;
+  margin: 10px auto;
+}
+
+.login_form fieldset input {
+  display: block;
+  width: 100%;
+  height: 50px;
+  border: 0;
+  background: none;
+  font-size: 25px;
+  color: #585859;
+  font-size: 1em;
+  padding-left: 10px;
+  box-sizing: border-box;
+}
+
+.login_form input:focus {
+  outline: none;
+}
+
+.login_form #mem_id {
+  border-bottom: 2px solid #1d1d1d;
+}
+
+.login_form #mem_pwd {
+  border-top: 2px solid #1d1d1d;
+}
+
+.login_form button {
+  padding: 10px 80px;
+  border-radius: 100px;
+  text-align: center;
+  font-size: 1em;
+  font-weight: lighter;
+  color: #fff;
+  border: solid 1px rgba(221, 10, 56, .2);
+
+  box-shadow: -6px -6px 5px rgba(228, 226, 226, .8), 6px 6px 10px rgba(0, 0, 0, .5);
+  -webkit-box-shadow: -6px -6px 5px rgba(228, 226, 226, .8), 6px 6px 10px rgba(0, 0, 0, .5);
+  -moz-box-shadow: -6px -6px 5px rgba(228, 226, 226, .8), 6px 6px 10px rgba(0, 0, 0, .5);
+
+  background: #f97f7f;
+  background: -moz-linear-gradient(top, #f97f7f 0%, #f97070 29%, #e81a46 100%);
+  background: -webkit-linear-gradient(top, #f97f7f 0%, #f97070 29%, #e81a46 100%);
+  background: linear-gradient(to bottom, #f97f7f 0%, #f97070 29%, #e81a46 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f97f7f', endColorstr='#e81a46', GradientType=0);
+
+  margin: 10px auto;
+  transition: all .4s;
+}
+
+.login_form button:hover {
+  cursor: pointer;
+  background: #ff5454;
+  background: -moz-linear-gradient(top, #ff5454 1%, #f44444 47%, #d81a1d 100%);
+  background: -webkit-linear-gradient(top, #ff5454 1%, #f44444 47%, #d81a1d 100%);
+  background: linear-gradient(to bottom, #ff5454 1%, #f44444 47%, #d81a1d 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff5454', endColorstr='#d81a1d', GradientType=0);
+}
+
+.login_form button:active {
+  color: #f8b5b0;
+
+  box-shadow: inset -4px -2px 2px rgba(225, 225, 225, .2), inset 8px 0px 16px rgba(0, 0, 0, .1);
+
+  background: #e81a46;
+  background: -moz-linear-gradient(top, #e81a46 0%, #fd6a6a 71%, #fc7b7b 100%);
+  background: -webkit-linear-gradient(top, #e81a46 0%, #fd6a6a 71%, #fc7b7b 100%);
+  background: linear-gradient(to bottom, #e81a46 0%, #fd6a6a 71%, #fc7b7b 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e81a46', endColorstr='#fc7b7b', GradientType=0);
+}
+
+.login_body ul {
+  width: 80%;
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: space-around;
+  font-size: 0.75em;
+}
+
+.login_body li {
+  width: 33.333333333%;
+}
+
+.login_body li:nth-child(2) {
+  border-left: 1px solid #1d1d1d;
+  border-right: 1px solid #1d1d1d;
+}
+
+.login_body li a:hover {
+  color: #e81a46;
+}
+
+
+
+
+
+/* 태블릿용 CSS */
+@media all and (min-width: 768px) {
+
+  .login_pg {
+    padding: 60px 0;
+  }
+
+
+  .login_body {
+    width: 80%;
+    max-width: 700px;
+    padding: 50px 0;
+  }
+
+  .login_body h3 {
+    font-size: 2.125em;
+  }
+
+  .login_body .login_form {
+    width: 70%;
+  }
+
+  .login_body .login_form fieldset {
+    margin: 30px auto;
+  }
+}
+
+/* PC용 CSS */
+@media all and (min-width: 1024px) {
+
+  .login_body .login_form fieldset {
+    margin-top: 50px;
+  }
+
+  .login_form button {
+    margin-top: 50px;
+  }
+}
+
+
+
+
+
+/* 비밀번호 변경 모달창 */
+
+
+#modal_pwd {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, .8);
+
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* display: none; */
+}
+
+#find_pwd_modal {
+  width: 100%;
+  max-width: 500px;
+  margin: 120px auto;
+  background: #fff;
+  border: 1px solid #fff;
+}
+
+.modal_head {
+  width: 100%;
+  height: 50px;
+  background-color: #000;
+  padding: 0 5px;
+  box-sizing: border-box;
+}
+
+.modal_head .logo {
+  width: 60px;
+  height: 50px;
+  background: url('../../images/main/logo_main.png') no-repeat center;
+  background-size: 44px;
+  text-indent: -9999px;
+  float: left;
+  cursor: pointer;
+}
+
+.modal_head button {
+  width: 40px;
+  height: 50px;
+  background: url('../../images/main/close-w.png') no-repeat center;
+  background-size: 24px;
+  text-indent: -9999px;
+  float: right;
+  border: 0;
+  cursor: pointer;
+}
+
+
+.find_pwd_section {
+  width: 100%;
+  margin: 0 auto;
+  padding: 10px 10px 20px 10px;
+  box-sizing: border-box;
+}
+
+
+.find_pwd_section h2 {
+  width: 100%;
+  border-bottom: 2px solid #000;
+  text-align: left;
+  margin: 20px auto;
+}
+
+
+.find_pwd_section form {
+  width: 100%;
+  border: 1px solid #eee;
+  text-align: left;
+  padding: 20px 15px;
+  box-sizing: border-box;
+}
+
+
+.find_pwd_section form p {
+  display: block;
+  margin: 12px auto;
+}
+
+
+.find_pwd_section form label {
+  font-size: 0.75rem;
+  line-height: 30px;
+  width: 20%;
+  float: left;
+}
+
+.find_pwd_section form input {
+  width: 79%;
+  height: 30px;
+  line-height: 30px;
+  font-size: 0.75rem;
+  float: right;
+  padding: 0 10px;
+  box-sizing: border-box;
+  outline: none;
+}
+
+.find_pwd_section form input:focus {
+  outline: none;
+}
+
+.find_pwd_section form button {
+  display: block;
+  margin: 10px auto;
+  margin-top: 30px;
+  padding: 10px 50px;
+  box-sizing: border-box;
+  color: #fff;
+  border-radius: 20px;
+  border: solid 1px rgba(221, 10, 56, .2);
+
+  box-shadow: -2px -2px 2px rgba(228, 226, 226, .8), 3px 3px 4px rgba(0, 0, 0, .5);
+  -webkit-box-shadow: -2px -2px 2px rgba(228, 226, 226, .8), 3px 3px 4px rgba(0, 0, 0, .5);
+  -moz-box-shadow: -2px -2px 2px rgba(228, 226, 226, .8), 3px 3px 4px rgba(0, 0, 0, .5);
+
+  background: #f97f7f;
+  background: -moz-linear-gradient(top, #f97f7f 0%, #f97070 29%, #e81a46 100%);
+  background: -webkit-linear-gradient(top, #f97f7f 0%, #f97070 29%, #e81a46 100%);
+  background: linear-gradient(to bottom, #f97f7f 0%, #f97070 29%, #e81a46 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f97f7f', endColorstr='#e81a46', GradientType=0);
+
+  transition: all .4s;
+}
+
+
+.find_pwd_section form button:hover {
+  cursor: pointer;
+  background: #ff5454;
+  background: -moz-linear-gradient(top, #ff5454 1%, #f44444 47%, #d81a1d 100%);
+  background: -webkit-linear-gradient(top, #ff5454 1%, #f44444 47%, #d81a1d 100%);
+  background: linear-gradient(to bottom, #ff5454 1%, #f44444 47%, #d81a1d 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff5454', endColorstr='#d81a1d', GradientType=0);
+}
+
+
+.find_pwd_section form button:active {
+  color: #f8b5b0;
+
+  box-shadow: inset -4px -2px 2px rgba(225, 225, 225, .2), inset 8px 0px 16px rgba(0, 0, 0, .1);
+
+  background: #e81a46;
+  background: -moz-linear-gradient(top, #e81a46 0%, #fd6a6a 71%, #fc7b7b 100%);
+  background: -webkit-linear-gradient(top, #e81a46 0%, #fd6a6a 71%, #fc7b7b 100%);
+  background: linear-gradient(to bottom, #e81a46 0%, #fd6a6a 71%, #fc7b7b 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e81a46', endColorstr='#fc7b7b', GradientType=0);
+}
+
+
+

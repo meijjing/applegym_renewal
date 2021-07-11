@@ -1,0 +1,460 @@
+/*
+CSS Document
+09-02-event
+*/
+
+
+/* 모바일용 CSS */
+
+/* 메인 img 영역 CSS  */
+.main_section {
+  width: 100%;
+  height: auto;
+  background: #222222;
+}
+
+.main_img {
+  position: relative;
+}
+
+.main_img img {
+  display: block;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.aside {
+  display: none;
+}
+
+
+/* contents CSS */
+.contents {
+  width: 100%;
+  margin: 0 auto;
+  padding: 60px 5%;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+/* event 영역 CSS */
+.event_section {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.event_section h2 {
+  font-size: 2rem;
+  text-shadow: 1px 1px 2px #e81a46;
+}
+
+.event_section p {
+  font-size: 0.875rem;
+  margin-top: 10px;
+  color: #585859;
+}
+
+.event_section h3 {
+  margin-top: 40px;
+  font-size: 1rem;
+}
+
+.event_section h3 span {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+
+/* search_box 영역 CSS */
+.search_box {
+  width: 100%;
+  margin: 0px auto;
+  margin-top: 80px;
+  position: relative;
+}
+
+.search_box input {
+  width: 100%;
+  height: 30px;
+  padding-left: 20px;
+  box-sizing: border-box;
+  outline: none;
+  color: #8c8c8c;
+  border: 0;
+  border-radius: 0;
+  border-bottom: 2px solid #000;
+  transition: all .4s;
+  float: left;
+}
+
+.search_box input::-ms-clear,
+.search_box input::-ms-reveal {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+.search_box input::-webkit-search-decoration,
+.search_box input::-webkit-search-cancel-button,
+.search_box input::-webkit-search-results-button,
+.search_box input::-webkit-search-results-decoration {
+  display: none;
+}
+
+.search_box input:focus,
+.search_box input:hover {
+  border-bottom: 2px solid #e81a46;
+}
+
+.search_box button {
+  width: 50px;
+  height: 30px;
+  background: url('../../images/main/search-b.png') no-repeat center;
+  background-size: 24px;
+  text-indent: -9999px;
+  cursor: pointer;
+  border: 0;
+  border-radius: 20px;
+  position: absolute;
+  right: 0;
+  bottom: 2px;
+
+  transition: .3s ease-in-out;
+}
+
+.search_box button:hover {
+  background: url('../../images/main/search-p.png') no-repeat center;
+  background-size: 24px;
+}
+
+.search_box button:active {
+  opacity: .6;
+}
+
+
+/* event 테이블 CSS */
+.event_table {
+  width: 100%;
+  margin: 20px auto;
+  text-align: left;
+}
+
+.event_table .event_box {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+
+  padding: 30px 0 10px 0;
+  box-sizing: border-box;
+
+  border-bottom: 1px solid #eee;
+}
+
+
+.event_box .img_box {
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.event_box .img_box img {
+  transition: all 0.6s;
+  object-fit: cover;
+}
+
+.event_box .img_box:hover img {
+  transform: scale(1.1);
+}
+
+.event_box .img_box:active img {
+  opacity: .8;
+}
+
+.event_box .desc_box {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.event_box .tit_box {
+  width: 100%;
+  font-size: 1.375rem;
+  margin-bottom: 20px;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  transition: .3s ease-in-out;
+}
+
+.event_box .tit_box a:hover {
+  text-decoration: underline
+}
+
+.event_box .tit_box span {
+  color: #e81a46;
+}
+
+.event_box .date_box {
+  width: 48%;
+  font-size: 0.75rem;
+  color: #8c8c8c;
+  float: left;
+}
+
+.event_box .view_box {
+  width: 48%;
+  font-size: 0.75rem;
+  color: #8c8c8c;
+  text-align: right;
+  float: right;
+}
+
+.event_box .view_box::before {
+  content: '';
+  width: 20px;
+  height: 15px;
+  background: url('../../images/view.png') no-repeat bottom center;
+  background-size: 18px;
+  display: inline-block;
+  margin-right: 3px;
+  /* position: absolute;
+  top: 59px;
+  right: 72px; */
+}
+
+.event_section .wr_btn {
+  position: absolute;
+  bottom: -50px;
+  left: 10px;
+
+  width: 80px;
+  height: 30px;
+  line-height: 30px;
+  border: none;
+  background: #000;
+  font-size: 0.75rem;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.event_section .wr_btn:hover {
+  background: #3b3b3b;
+}
+
+.event_section .wr_btn:active {
+  opacity: .7;
+}
+
+
+
+
+
+.pager {
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 50px;
+  font-size: 0.75rem;
+}
+
+.pager a {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  background: #eee;
+  border-radius: 10px;
+  margin: 0 2px;
+  transition: all .3s;
+}
+
+.pager .list_prev_btn {
+  width: 30px;
+  height: 30px;
+  background: url('../../images/07-branch/prev_btn.png') no-repeat center;
+  background-size: auto 30px;
+  text-indent: -9999px;
+
+  margin-right: 10px;
+  transition: all .3s;
+}
+
+.pager .list_next_btn {
+  width: 30px;
+  height: 30px;
+  background: url('../../images/07-branch/next_btn.png') no-repeat center;
+  background-size: auto 30px;
+  text-indent: -9999px;
+
+  margin-left: 10px;
+  transition: all .3s;
+}
+
+.pager span a:hover {
+  transform: scale(1.1);
+}
+
+.pager span a:active {
+  opacity: .6;
+}
+
+.pager .page {
+  box-shadow: inset -2px -2px 4px rgba(125, 125, 125, .3);
+}
+
+.pager .page:hover {
+  opacity: .6;
+  color: #e81a46
+}
+
+.pager .page:active {
+  box-shadow: inset 2px 2px 4px rgba(125, 125, 125, .3);
+}
+
+
+
+
+
+
+/* 태블릿용 CSS */
+@media all and (min-width: 768px) {
+
+  /* aside */
+  .aside {
+    display: block !important;
+    width: 480px;
+    height: 60px;
+
+    position: absolute;
+    bottom: 4px;
+    left: 50%;
+    margin-left: -240px;
+  }
+
+  .aside li {
+    width: 160px;
+    line-height: 60px;
+    float: left;
+    font-size: 0.875rem;
+    text-align: center;
+    color: #fff;
+    text-shadow: 2px 2px 8px #000;
+  }
+
+  .aside li a {
+    display: block;
+    height: 100%;
+  }
+
+  .aside .on_menu {
+    display: block;
+    color: #e81a46;
+    font-weight: bold;
+  }
+
+  .aside .on_menu:after {
+    border-bottom: 4px solid #e81a46;
+    bottom: 0;
+    content: " ";
+    display: block;
+    margin: 0 auto;
+    width: 60%;
+
+  }
+
+  .aside .aside_menu {
+    display: block;
+  }
+
+  .aside .aside_menu:after {
+    border-bottom: 4px solid rgba(255, 255, 255, 0);
+    bottom: 0;
+    content: " ";
+    display: block;
+    margin: 0 auto;
+    -webkit-transition: all .28s ease-in-out;
+    transition: all .28s ease-in-out;
+    width: 0;
+  }
+
+  .aside .aside_menu:hover:after {
+    -webkit-transition: width 350ms ease-in-out;
+    transition: width 350ms ease-in-out;
+    width: 60%;
+
+    font-weight: bold;
+    border-bottom: 4px solid #e81a46;
+  }
+
+  .aside .aside_menu:hover {
+    color: #e81a46;
+    font-weight: bold;
+    transition: all .4s;
+  }
+
+
+  /* 이벤트 영역 CSS */
+
+  .event_section h2 {
+    font-size: 2.5rem;
+  }
+
+  /* .search_box {
+    max-width: 750px;
+  } */
+
+  /* .event_table {
+    max-width: 750px;
+  } */
+
+  .event_table .event_box {
+    justify-content: space-between;
+    padding: 20px 0;
+  }
+
+  .event_box .img_box {
+    width: 30%;
+    margin-right: 3%;
+  }
+
+  .event_box .desc_box {
+    width: 67%;
+    position: relative;
+    padding: 10px 0;
+  }
+
+  .event_box .date_box {
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+  }
+
+  .event_box .view_box {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+/* PC용 CSS */
+@media all and (min-width: 1024px) {
+  .event_table h2 {
+    font-size: 2.75rem;
+  }
+}

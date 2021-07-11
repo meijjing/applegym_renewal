@@ -1,0 +1,513 @@
+/*
+CSS Document
+members/
+edit.css
+*/
+
+
+/* 모바일용 CSS */
+
+/* 회원수정 폼 CSS */
+
+.edit_section {
+  width: 100%;
+  background: url('../../images/02-join/join_bg.png') repeat top;
+  background-size: 100%;
+
+  text-align: center;
+  padding: 50px 0;
+  box-sizing: border-box;
+}
+
+.edit_section h2 {
+  color: #fff;
+  font-size: 2.250rem;
+  text-shadow: 1px 1px 2px rgba(232, 26, 70, .9);
+  font-weight: normal;
+}
+
+.edit_section .edit_pg {
+  width: 80%;
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 30px 0;
+  box-sizing: border-box;
+  background: rgba(255, 255, 255, .9);
+
+  position: relative;
+}
+
+.edit_pg h3 {
+  color: #e81a46;
+  font-size: 1.875rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, .5);
+  margin-top: 20px;
+}
+
+.edit_pg>p {
+  font-size: 0.75rem;
+  color: #585859;
+}
+
+.edit_pg .mem_nm {
+  margin: 20px 0 40px 0;
+  color:#000;
+}
+
+.edit_pg .mem_nm span {
+  font-family: Jua;
+  font-size: 1rem;
+  margin-right: 3px;
+  color: #e81a46;
+  text-decoration: underline;
+  letter-spacing: 1px;
+}
+
+.edit_form {
+  width: 90%;
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.edit_form fieldset {
+  margin: 20px auto;
+  margin-bottom: 0;
+  font-size: 0.625em;
+  color: #e81a46;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.edit_form fieldset p {
+  width: 100%;
+  margin: 10px 0;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
+
+.edit_form fieldset .fixed_value {
+  color: #000;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.edit_form fieldset .mem_id {
+  width: 55%;
+  margin-right: 5%;
+}
+
+.edit_form fieldset .male_flg {
+  width: 40%;
+}
+
+.edit_form fieldset .mem_id label,
+.edit_form fieldset .male_flg label {
+  width: 50px!important;
+}
+
+.edit_form fieldset .mem_id span,
+.edit_form fieldset .male_flg span {
+  width: calc(100% - 60px);
+}
+
+.edit_form fieldset .fixed_value span {
+  border-bottom: 2px solid #8c8c8c;
+  padding-left: 15px;
+  box-sizing: border-box;
+  outline: 0;
+  color: #000;
+  background: none;
+  font-size: 0.875rem;
+  font-weight: bold;
+}
+
+.male_flg span {
+  text-align: center !important;
+  padding-left: 0 !important;
+}
+
+.edit_form fieldset .mem_pwd {
+  margin-top: 30px;
+  margin-bottom: 0;
+}
+
+.edit_form fieldset .re_pwd {
+  margin-top: 5px;
+}
+
+.edit_form fieldset input {
+  display: block;
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  margin: 5px auto;
+  border: 0;
+  border-bottom: 2px solid #585859;
+  border-radius: 8px 8px 0 0;
+  padding-left: 15px;
+  box-sizing: border-box;
+  outline: 0;
+  color: #8c8c8c;
+  background: #fff;
+  font-size: 0.75rem;
+  transition: .3s ease-in-out
+}
+
+.edit_form fieldset input:active,
+.edit_form fieldset input:focus {
+  border-bottom: 2px solid #e81a46;
+  color: #585859;
+}
+
+.edit_form .tel_no input,
+.edit_form #postal_code {
+  width: 70%;
+  border-radius: 8px 0 0 0;
+}
+
+.edit_form fieldset label {
+  width: 100%;
+  display: block;
+  margin-left: 10px;
+  font-size: 0.75rem;
+  color: #000;
+  font-family: Jua;
+}
+
+.edit_form .tel_no button,
+.edit_form .address button {
+  width: 30%;
+  height: 40px;
+  line-height: 40px;
+  /* margin: 5px 0; */
+  font-size: 0.75rem;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  border-radius: 0 8px 0 0;
+  color: #fff;
+
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+
+  text-shadow: 0 1px 1px rgba(0, 0, 0, .3);
+}
+
+.edit_form .tel_no button,
+.edit_form .address button {
+  background-image: linear-gradient(to right, rgb(32, 30, 34) 0%, #e81a46 52%, rgb(32, 30, 34) 100%)
+}
+
+.edit_form .tel_no button:hover,
+.edit_form .address button:hover {
+  background-position: right center;
+  text-decoration: none;
+}
+
+.edit_form .tel_no button:active,
+.edit_form .address button:active {
+  opacity: 0.7;
+}
+
+.edit_form input:invalid {
+  background: rgba(255, 41, 87, 0.3);
+}
+
+.edit_form span {
+  font-size: 0.625rem;
+}
+
+.edit_form .email_con {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.edit_form .email_con input {
+  width: 30%;
+  margin: 5px 0;
+}
+
+.edit_form .email_con select {
+  display: block;
+  float: right;
+  width: 31%;
+  height: 40px;
+  margin: 5px 0;
+  margin-left: 1%;
+  padding-left: 15px;
+  box-sizing: border-box;
+  border: 0;
+  outline: 0;
+  border-bottom: 2px solid #585859;
+  border-radius: 8px 8px 0 0;
+  background: #fff;
+  font-size: 0.75rem;
+  color: #585859;
+}
+
+.edit_form .email_con span {
+  display: block;
+  width: 8%;
+  height: 40px;
+  line-height: 40px;
+  margin: 5px auto;
+  text-align: center;
+  font-size: 1.25em;
+  font-weight: bold;
+}
+
+.edit_form .address label {
+  margin-top: 5px;
+}
+
+
+.edit_form .edit_btns {
+  text-align: center;
+}
+
+.edit_form .edit_btn {
+  display: block;
+  /* width: 60%; */
+  margin: 20px auto;
+  border: 0;
+  outline: 0;
+  text-align: center;
+  font-size: 1.125rem;
+  padding: 14px 60px;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, .3);
+
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+
+
+  box-shadow: -3px -3px 5px rgba(228, 226, 226, .8), 3px 3px 6px rgba(0, 0, 0, .3);
+  -webkit-box-shadow: -3px -3px 5px rgba(228, 226, 226, .8), 3px 3px 6px rgba(0, 0, 0, .3);
+  -moz-box-shadow: -3px -3px 5px rgba(228, 226, 226, .8), 3px 3px 6px rgba(0, 0, 0, .3);
+
+  color: #fef4e9;
+  transition: .5s ease-in-out;
+
+  background: #e81a46;
+  background: -moz-linear-gradient(top, #f36c6c 0%, #f97070 29%, #e81a46 100%);
+  background: -webkit-linear-gradient(top, #f36c6c 0%, #f97070 29%, #e81a46 100%);
+  background: linear-gradient(to bottom, #f36c6c 0%, #f97070 29%, #e81a46 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f36c6c', endColorstr='#e81a46', GradientType=0);
+}
+
+.edit_form .edit_btn button:hover {
+  background: #e81a46;
+  background: -moz-linear-gradient(top, #ff5454 1%, #f44444 47%, #d81a1d 100%);
+  background: -webkit-linear-gradient(top, #ff5454 1%, #f44444 47%, #d81a1d 100%);
+  background: linear-gradient(to bottom, #ff5454 1%, #f44444 47%, #d81a1d 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff5454', endColorstr='#d81a1d', GradientType=0);
+}
+
+.edit_form .edit_btn button:active {
+  color: #f8b5b0;
+
+  box-shadow: inset -3px -2px 2px rgba(225, 225, 225, .2), inset 8px 0px 16px rgba(0, 0, 0, .1);
+
+  background: #e81a46;
+  background: -moz-linear-gradient(bottom, #f36c6c 0%, #eb5050 29%, #e81a46 100%);
+  background: -webkit-linear-gradient(bottom, #f36c6c 0%, #eb5050 29%, #e81a46 100%);
+  background: linear-gradient(to top, #f36c6c 0%, #eb5050 29%, #e81a46 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f36c6c', endColorstr='#e81a46', GradientType=0);
+}
+
+.edit_form .del_btn {
+  display: block;
+  border: 0;
+  outline: 0;
+  text-align: center;
+  font-size: 0.75rem;
+  width: 80px;
+  height: 28px;
+  line-height: 28px;
+  background: #000;
+  color: #fff;
+
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+
+  box-shadow: -1px -1px 2px rgba(228, 226, 226, .8), 1px 1px 4px rgba(0, 0, 0, .5);
+  -webkit-box-shadow: -1px -1px 2px rgba(228, 226, 226, .8), 1px 1px 4px rgba(0, 0, 0, .5);
+  -moz-box-shadow: -1px -1px 2px rgba(228, 226, 226, .8), 1px 1px 4px rgba(0, 0, 0, .5);
+
+
+  color: #fff;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+
+  transition: all .4s ease-in-out;
+}
+
+.edit_form .del_btn:hover {
+  background: #3c3c3c;
+}
+
+.edit_form .del_btn:active {
+  opacity: 0.7;
+}
+
+
+.edit_form .close_btn {
+  width: 30px;
+  height: 30px;
+
+  background: url('../../images/main/close-g.png') no-repeat center;
+  background-size: 25px;
+  text-indent: -9999px;
+  border: 0;
+
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.edit_form .close_btn:hover {
+  background: url('../../images/main/close-p.png') no-repeat center;
+  background-size: 25px;
+}
+
+.edit_form .close_btn:active {
+  background: url('../../images/main/close-g.png') no-repeat center;
+  background-size: 25px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 태블릿용 CSS */
+@media all and (min-width: 768px) {
+
+
+  .edit_pg h3 {
+    font-size: 2.25em;
+  }
+
+  /* .edit_pg>p {
+    font-size: 1rem;
+  } */
+
+  .edit_form {
+    width: 70%;
+  }
+
+  .edit_form fieldset {
+    font-size: 0.875rem;
+  }
+
+  .edit_form fieldset label {
+    font-size: 0.813rem;
+  }
+
+}
+
+
+
+
+
+
+
+/* PC용 CSS */
+@media all and (min-width: 1024px) {
+
+  /* .contents .edit_pg {
+    width: 90%;
+  } */
+
+  .edit_pg h3 {
+    font-size: 2.5em;
+  }
+
+
+  .edit_form fieldset p {
+    margin: 15px auto;
+  }
+
+
+  .edit_form fieldset input,
+  .edit_form fieldset .fixed_value {
+    /* height: 50px;
+    line-height: 50px; */
+    font-size: 0.875rem;
+  }
+
+  .edit_form fieldset label {
+    font-size: 0.875rem;
+  }
+
+  .edit_form fieldset span {
+    font-size: 0.75rem;
+  }
+
+  .edit_form #male_flg {
+    height: 50px;
+  }
+
+/* 
+  .edit_form fieldset .mem_pwd,
+  .edit_form fieldset .re_pwd {
+    margin: 5px 0;
+  } */
+
+  .edit_form .mem_pwd {
+    width: 49%;
+    margin-right: 2%!important;
+  }
+
+  .edit_form .re_pwd {
+    width: 49%;
+    margin-top: 30px!important;
+    margin-bottom: 0;
+  }
+
+
+
+  .edit_form .tel_no button,
+  .edit_form .address button {
+    height: 40px;
+    padding: 0 25px;
+    font-size: 0.875rem;
+  }
+
+  .edit_form .email_con select {
+    height: 40px;
+    font-size: 0.875rem;
+  }
+
+  .edit_form .email_con span {
+    height: 40px;
+  }
+
+  .edit_form .edit_btn button {
+    font-size: 1.5rem;
+    padding: 18px 70px;
+
+  }
+
+
+
+
+
+}

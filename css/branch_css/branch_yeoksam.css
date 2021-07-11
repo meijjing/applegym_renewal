@@ -1,0 +1,754 @@
+/*
+CSS Document
+07-01-branch_yeoksam
+*/
+
+
+
+
+/* 모바일용 CSS */
+
+.divider {
+  width: 100%;
+  height: 1px;
+  background: #8c8c8c;
+  margin: 20px auto;
+}
+
+.m_divider {
+  width: 60px;
+  margin: 60px auto;
+  height: 2px;
+  background: #e81a46;
+}
+
+
+
+/* 메인 img 영역 CSS  */
+.main_section {
+  width: 100%;
+  height: auto;
+  background: #222222;
+}
+
+.main_img {
+  position: relative;
+}
+
+.main_img img {
+  display: block;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.aside {
+  display: none;
+}
+
+
+
+
+/* contents */
+.contents {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  font-size: 0.875rem;
+}
+
+/* .contents section {
+  display: block;
+  padding: 20px 5%;
+  box-sizing: border-box;
+} */
+
+.intro_section {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  padding: 20px 0;
+  box-sizing: border-box;
+}
+
+.intro_section .info_title {
+  display: block;
+  width: 100%;
+  max-width: 600px;
+  margin: 30px 0;
+}
+
+.intro_section .info_img {
+  display: block;
+  width: 100%;
+  margin: 20px auto;
+}
+
+.intro_wrap {
+  line-height: 1.8;
+  margin: 0 auto;
+}
+
+
+.intro_list {
+  width: 90%;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.intro_list ul li {
+  width: 50%;
+  float: left;
+}
+
+.intro_list li:before {
+  content: '✓ ';
+}
+
+.time_info {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.time_info h4 {
+  margin-left: 50px;
+  line-height: 30px;
+}
+
+.time_info h4::before {
+  content: ' ';
+  display: inline-block;
+  background: url("../../images/07-branch/time.png") no-repeat center;
+  background-size: auto 30px;
+  width: 35px;
+  height: 30px;
+
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+
+.parking_info {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.parking_info h4 {
+  margin-left: 50px;
+  line-height: 30px;
+}
+
+.parking_info h4::before {
+  content: ' ';
+  display: inline-block;
+  background: url("../../images/07-branch/parking.png") no-repeat center;
+  background-size: auto 30px;
+  width: 42px;
+  height: 30px;
+
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+.time_info p,
+.parking_info p {
+  padding-left: 50px;
+  box-sizing: border-box;
+}
+
+
+
+
+/* program_section */
+
+.program_section {
+  height: auto;
+  margin: 0 auto;
+}
+
+.program_section ul {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.program_section li {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 10px auto
+}
+
+.program_section li img {
+  display: block;
+  width: 30%;
+  max-width: 160px;
+}
+
+.program_section li p {
+  display: block;
+  width: 60%;
+  text-align: left;
+}
+
+
+
+
+
+
+
+/* gallery */
+
+.gallery_section {
+  width: 100%;
+}
+
+
+.gallery_section .gallery_section_tit {
+  display: block;
+  width: 90%;
+  max-width: 400px;
+  margin: 40px auto;
+  filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, .5));
+}
+
+/* .gallery_section .gallery_list {
+  padding: 0 5%;
+  box-sizing: border-box;
+} */
+
+.gallery_slider,
+.thumb_slider {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.gallery_slider li img {
+  display: block;
+  width: 100%;
+  margin: 10px auto;
+  border-radius: 20px;
+}
+
+.thumb_slider {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.thumb_slider li img {
+  width: 95%;
+  margin: 0 auto;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.thumb_slider li img:active {
+  opacity: 0.8;
+}
+
+.slick-prev {
+  width: 50px;
+  height: 100px;
+  background: url('../../images/main/prev-btn.png') no-repeat center;
+  background-size: 34px;
+  text-indent: -9999px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+
+  position: absolute;
+  left: -50px;
+  top: -15px;
+  z-index: 10;
+}
+
+.slick-next {
+  width: 50px;
+  height: 100px;
+  background: url('../../images/main/next-btn.png') no-repeat center;
+  background-size: 34px;
+  text-indent: -9999px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+
+  position: absolute;
+  right: -50px;
+  top: -15px;
+  z-index: 10;
+}
+
+
+/* schedule_section */
+
+.schedule_section {
+  display: block;
+  width: 100%;
+  padding: 60px 0;
+  box-sizing: border-box;
+}
+
+.schedule_section .schedule_section_tit {
+  display: block;
+  width: 90%;
+  max-width: 400px;
+  margin: 40px auto;
+  filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, .5));
+}
+
+.schedule_section .schedule_menu {
+  width: 100%;
+
+}
+
+.tab_tit {
+  width: 100%;
+}
+
+.tab_tit ul {
+  margin: 0 auto;
+  width: 90%;
+  max-width: 400px;
+}
+
+.tab_tit li {
+  float: left;
+  width: 49%;
+  height: 40px;
+  line-height: 40px;
+  cursor: pointer;
+  text-align: center;
+  font-weight: bold;
+  border: 1px solid #000;
+}
+
+.tab_tit li:first-child {
+  border-right: none;
+}
+
+.tab_tit li.on {
+  background: #000;
+  color: #fff;
+}
+
+.tab_con {
+  width: 100%;
+  clear: both;
+  background: #fff;
+  padding-top: 20px;
+  box-sizing: border-box;
+
+}
+
+.tab_con img {
+  display: block;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.tab_con div {
+  display: none;
+}
+
+.tab_con div.on {
+  display: block;
+}
+
+
+
+
+
+/* address_section */
+.address_section {
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 60px;
+
+  position: relative;
+}
+
+.address_section .address_section_tit {
+  display: block;
+  width: 90%;
+  max-width: 400px;
+  margin: 40px auto;
+  filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, .5));
+}
+
+.address_section .map {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 800px;
+  height: 300px;
+  z-index: 1;
+}
+
+.customoverlay {
+  position: relative;
+  bottom: 85px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  border-bottom: 2px solid #ddd;
+  float: left;
+}
+
+.customoverlay:nth-of-type(n) {
+  border: 0;
+  box-shadow: 0px 1px 2px #888;
+}
+
+.customoverlay a {
+  display: block;
+  text-decoration: none;
+  color: #000;
+  text-align: center;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: bold;
+  overflow: hidden;
+  background: #e81a46;
+  background: #e81a46 url('https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/arrow_white.png') no-repeat right 14px center;
+}
+
+.customoverlay .title {
+  display: block;
+  text-align: center;
+  background: #fff;
+  margin-right: 35px;
+  padding: 10px 15px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.customoverlay:after {
+  content: '';
+  position: absolute;
+  margin-left: -12px;
+  left: 50%;
+  bottom: -12px;
+  width: 22px;
+  height: 12px;
+  background: url('https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/vertex_white.png')
+}
+
+
+/* location */
+.location {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px 5%;
+  box-sizing: border-box;
+  background: #f8f8f8;
+  border-top: 1px solid #c4c4c4;
+  font-size: 0.75rem;
+}
+
+
+
+.location h4 {
+  width: 23%;
+  height: 50px;
+  background: url('../../images/07-branch/address.png') no-repeat center;
+  background-size: auto 100%;
+  margin: 0;
+  float: left;
+  text-indent: -9999px;
+}
+
+.location p {
+  width: 77%;
+  line-height: 22px;
+  float: right;
+}
+
+/* dot line */
+.dotline {
+  border-bottom: 1px dotted #c4c4c4;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 800px;
+}
+
+
+/* contact */
+.contact {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px 5%;
+  box-sizing: border-box;
+  background: #f8f8f8;
+  border-bottom: 1px solid #c4c4c4;
+  font-size: 0.75rem;
+}
+
+.contact h4 {
+  width: 23%;
+  height: 88px;
+  background: url('../../images/07-branch/telephone.png') no-repeat center;
+  background-size: 50px;
+  margin: 0;
+  float: left;
+
+  text-indent: -9999px;
+}
+
+.contact p {
+  width: 77%;
+  line-height: 22px;
+  float: right;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 태블릿용 CSS */
+@media all and (min-width: 768px) {
+
+  /* aside */
+
+  .aside {
+    display: block !important;
+    width: 450px;
+    height: 60px;
+
+    position: absolute;
+    bottom: 4px;
+    left: 50%;
+    margin-left: -225px;
+  }
+
+  .aside li {
+    width: 150px;
+    line-height: 60px;
+    float: left;
+    font-size: 1rem;
+    text-align: center;
+    color: #fff;
+    text-shadow: 2px 2px 8px #000;
+  }
+
+  .aside li a {
+    display: block;
+    height: 100%;
+  }
+
+  .aside .on_menu {
+    display: block;
+    color: #e81a46;
+    font-weight: bold;
+  }
+
+  .aside .on_menu:after {
+    border-bottom: 4px solid #e81a46;
+    bottom: 0;
+    content: " ";
+    display: block;
+    margin: 0 auto;
+    width: 60%;
+
+  }
+
+  .aside .aside_menu {
+    display: block;
+  }
+
+  .aside .aside_menu:after {
+    border-bottom: 4px solid rgba(255, 255, 255, 0);
+    bottom: 0;
+    content: " ";
+    display: block;
+    margin: 0 auto;
+    -webkit-transition: all .28s ease-in-out;
+    transition: all .28s ease-in-out;
+    width: 0;
+  }
+
+  .aside .aside_menu:hover:after {
+    -webkit-transition: width 350ms ease-in-out;
+    transition: width 350ms ease-in-out;
+    width: 60%;
+
+    font-weight: bold;
+    border-bottom: 4px solid #e81a46;
+  }
+
+  .aside .aside_menu:hover {
+    color: #e81a46;
+    font-weight: bold;
+    transition: all .4s;
+  }
+
+
+  .intro_section {
+    padding-bottom: 0 !important;
+  }
+
+  .info_wrap {
+    padding: 0 5%;
+    box-sizing: border-box;
+  }
+
+  .info_divider {
+    display: none !important;
+  }
+
+  .time_info {
+    float: left;
+    width: 50%;
+  }
+
+  .parking_info {
+    float: right;
+    width: 50%;
+  }
+
+
+  /* program_section CSS */
+
+  .program_section ul {
+    width: 100%;
+    padding: 0 5%;
+    box-sizing: border-box;
+  }
+
+  .program_section li {
+    width: 50%;
+    float: left;
+  }
+
+  .program_section li p {
+    width: 50%;
+  }
+
+
+  /* gallery 영역 CSS */
+  .gallery_section .gallery_section_tit {
+    margin: 50px;
+  }
+
+  .slick-prev {
+    top: 0;
+  }
+
+  .slick-next {
+    top: 0;
+  }
+
+
+
+  /* 스케쥴 영역 CSS */
+  .schedule_section .schedule_section_tit {
+    margin: 50px;
+  }
+
+  /* address 영역 CSS */
+
+  .address_section .address_section_tit {
+    margin: 50px;
+  }
+
+  .address_section .map {
+    height: 400px;
+  }
+}
+
+
+
+/* PC용 CSS */
+@media all and (min-width: 1024px) {
+
+  .intro_section .intro_title {
+    max-width: 700px;
+  }
+
+  .divider {
+    display: none;
+  }
+
+  .intro_wrap {
+    height: 180px;
+    margin: 30px auto;
+    padding: 0 5%;
+    box-sizing: border-box;
+    font-size: 1.063rem;
+  }
+
+  .intro_list {
+    width: 24%;
+    height: 150px;
+    float: left;
+    border-right: 1px solid #8c8c8c;
+  }
+
+  .intro_list ul li {
+    width: 100%;
+  }
+
+  .info_wrap {
+    padding: 0;
+    width: 75%;
+    float: left;
+  }
+
+  .time_info {
+    width: 50%;
+    margin-left: 5%;
+    height: 150px;
+    border-right: 1px solid #8c8c8c;
+  }
+
+  .parking_info {
+    width: 39%;
+    margin-left: 5%;
+  }
+
+  .program_section ul {
+    width: 100%;
+  }
+
+  .program_section li {
+    width: 20%;
+    float: left;
+    display: flex;
+    flex-flow: column nowrap;
+  }
+
+  .program_section li img {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .program_section li p {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+
+  .contents {
+    font-size: 1rem;
+  }
+
+
+
+
+
+
+}
