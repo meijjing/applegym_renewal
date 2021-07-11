@@ -114,9 +114,9 @@ if($e_pageNum > $total_page) { //마지막 번호가 전체 페이지 수를 넘
         <!-- aside -->
         <aside class="aside">
           <ul>
-            <li><a class="on_menu" href="notice.php">NOTICE</a></li>
+            <li><a class="aside_menu" href="notice.php">NOTICE</a></li>
             <li><a class="aside_menu" href="event.php">EVENT</a></li>
-            <li><a class="aside_menu" href="community.php">COMMUNITY</a></li>
+            <li><a class="on_menu" href="community.php">COMMUNITY</a></li>
           </ul>
         </aside>
       </div>
