@@ -106,8 +106,8 @@ if($e_pageNum > $total_page) { //마지막 번호가 전체 페이지 수를 넘
 
     <section class="main_section">
       <div class="main_img">
-        <h2 class="blind">HISTORY</h2>
-        <p class="blind">애플짐 피트니스 센터를 소개합니다.</p>
+        <h2 class="blind">COMMUNITY</h2>
+        <p class="blind">애플짐은 다양한 소식을 전해드립니다.</p>
         <img src="../images/community_main.png" alt="">
 
 

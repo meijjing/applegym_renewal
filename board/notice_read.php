@@ -67,8 +67,8 @@ $b_file = $board['b_file'];
 
     <section class="main_section">
       <div class="main_img">
-        <h2 class="blind">HISTORY</h2>
-        <p class="blind">애플짐 피트니스 센터를 소개합니다.</p>
+        <h2 class="blind">NOTICE</h2>
+        <p class="blind">애플짐은 다양한 소식을 전해드립니다.</p>
         <img src="../images/notice_main.png" alt="">
 
 
