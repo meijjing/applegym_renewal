@@ -850,6 +850,7 @@ body {
 
 .search-section .search-form fieldset {
   width: 80%;
+  max-width: 700px;
   text-indent: -9999px;
   border: none;
   margin: 0 auto;
