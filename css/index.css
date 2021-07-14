@@ -843,6 +843,7 @@ body {
 /* 검색 영역 CSS */
 .search-section {
   width: 100%;
+  max-width: 700px;
   padding: 40px 0 60px 0;
   box-sizing: border-box;
   text-align: center;
@@ -902,7 +903,7 @@ body {
   text-indent: -9999px;
 
   position: absolute;
-  top: 0px;
+  top: 23px;
   right: 0px;
   cursor: pointer;
 }
