@@ -1,9 +1,6 @@
 <?php
-
 include "../admin/admin_check.php";
-
 ?>
-
 <!DOCTYPE html>
 <html lang="ko">
 
@@ -23,24 +20,13 @@ include "../admin/admin_check.php";
   <link href="../css/admin_css/admin_header.css" rel="stylesheet">
   <link href="../css/board_css/notice_write.css" rel="stylesheet">
 
-
   <!-- jQuery -->
   <script src="../js/jquery-3.6.0.min.js"></script>
 
   <script src="../js/admin_common.js" defer></script>
-
-
-
-
-
 </head>
-
 <body>
-
   <div class="wrap">
-
-
-
     <!-- admin header -->
     <header>
       <div class="header">
@@ -59,9 +45,7 @@ include "../admin/admin_check.php";
             <li class="home_btn"><a href="../index.php">홈으로</a></li>
             <li class="logout_btn"><a href="#" onclick="log_out()">로그아웃</a></li>
           </ul>
-
         </nav>
-
       </div><!-- header -->
     </header>
 
@@ -74,13 +58,8 @@ include "../admin/admin_check.php";
     }
     </script>
 
-
     <div class="write_section cfixed">
-
-
       <h2>이벤트 게시물 쓰기</h2>
-
-      
 
         <!-- 입력 폼 -->
         <form class="wr_form" action="event_write_ok.php" method="post" enctype="multipart/form-data" onsubmit="return form_check()">
@@ -144,10 +123,7 @@ include "../admin/admin_check.php";
               <button type="button" value="뒤로가기" onclick="history.back()">돌아가기</button>
             </p>
         </form>
-      
-
     </div><!-- write_section -->
-
   </div><!-- wrap -->
 
 
@@ -164,7 +140,6 @@ include "../admin/admin_check.php";
       var content = document.getElementById("content");
       var pwd = document.getElementById("pwd");
       var lock = document.getElementById("lock");
-
 
       // 이름(필수) 미입력시
       if (!auth_nm.value) { // if(!mem_nm.value) //값이 없다면
@@ -198,7 +173,6 @@ include "../admin/admin_check.php";
         mem_id.focus();
         return false;
       };
-
 
       // 제목(필수) 미입력시
       if (!title.value) {

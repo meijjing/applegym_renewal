@@ -1,5 +1,4 @@
 <?php
-
 session_start();
 
 $s_id = isset($_SESSION["s_id"])? $_SESSION["s_id"]:"";
@@ -20,12 +19,9 @@ $bno = $_GET['idx'];
 
 $sql = mq("select * from board where idx='$bno';");
 $board = $sql->fetch_array();
-
 ?>
-
 <!DOCTYPE html>
 <html lang="ko">
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -43,11 +39,9 @@ $board = $sql->fetch_array();
   <link href="../css/footer.css" rel="stylesheet">
   <link href="../css/board_css/community_write.css" rel="stylesheet">
 
-
   <!-- jQuery -->
   <script src="../js/jquery-3.6.0.min.js"></script>
   <script src="../js/common.js" defer></script>
-
 </head>
 
 <body>
@@ -60,7 +54,6 @@ $board = $sql->fetch_array();
         <h2 class="blind">COMMUNITY</h2>
         <p class="blind">애플짐 피트니스 센터를 소개합니다.</p>
         <img src="../images/community_main.png" alt="">
-
 
         <!-- aside -->
         <aside class="aside">
@@ -85,13 +78,11 @@ $board = $sql->fetch_array();
             <fieldset class="cfixed">
               <legend class="blind">커뮤니티 게시물 수정하기</legend>
 
-
               <p class="auth_nm cfixed">
                 <label for="auth_nm">작성자</label>
                 <input type="text" name="auth_nm" id="auth_nm" maxlength="10" autocomplete="off"
                   autocapitalize="off" value="<?php echo $board['auth_nm'] ?>">
               </p>
-
 
               <p class="email cfixed">
                 <label for="email">이메일</label>
@@ -179,10 +170,8 @@ $board = $sql->fetch_array();
         return false;
       };
 
-
       // 비밀번호 입력시 검증
       if(pwd.value) {
-
         if (!lock.value) {
           alert("비밀글을 체크하여 주세요.");
           lock.focus();
@@ -219,5 +208,4 @@ $board = $sql->fetch_array();
   </script>
 
 </body>
-
 </html>

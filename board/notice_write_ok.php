@@ -1,6 +1,4 @@
 <?php
-
-
 include "../inc/dbcon.php";
 
 // $idx = $_GET['idx'];
@@ -20,14 +18,12 @@ if(isset($_POST['lock'])) {
   $lock_post = 'N';
 };
 
-
 // 파일 업로드
 $today_time = strtotime(date('Ymdhis'));
 $tmpfile =  $_FILES['file']['tmp_name'];
 
 // $o_name = $today_time."_".$_FILES['file']['name'];
 $o_name = $_FILES['file']['name'];
-
 
 // iconv([입력 캐릭터셋], [변환하고자하는 캐릭터셋], [문자열]);
 // ANSI, UTF-8(유니코드), EUC-KR(한글)

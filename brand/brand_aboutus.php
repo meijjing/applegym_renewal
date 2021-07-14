@@ -1,14 +1,11 @@
 <!-- brand_aboutus.php -->
 <?php
-
 // 세션 실행
 session_start();
 
 $s_id = isset($_SESSION["s_id"])? $_SESSION["s_id"]:"";
 $s_name = isset($_SESSION["s_name"])? $_SESSION["s_name"]:"";
-
 ?>
-
 
 <!DOCTYPE html>
 <html lang="ko">
@@ -41,12 +38,8 @@ $s_name = isset($_SESSION["s_name"])? $_SESSION["s_name"]:"";
   <!-- aos -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
-
 </head>
-
 <body>
-
   <div class="wrap">
 
   <?php include "../header.php"; ?>
@@ -70,23 +63,16 @@ $s_name = isset($_SESSION["s_name"])? $_SESSION["s_name"]:"";
       </div>
     </section><!-- main_section -->
 
-
-
-
     <section class="contents">
 
       <section class="aboutus_section">
-       
 
           <h2 class="blind">브랜드 소개</h2>
-
-
           <h3 data-aos="fade-up" data-aos-duration="800">2002년 중동센터 창립 후 꾸준히 성장한 <b>애플짐</b>은</h3>
 
           <p data-aos="fade-up" data-aos-duration="800">
             1인 대표 직영 피트니스센터라는 새로운 운영방식으로, 안정적인 운영과 만족도 높은 서비스를 통해 국내 피트니스 업계의선두를 유지하며 수도권을 중심으로 인지도와 브랜드 가치 쌓아왔습니다.
           </p>
-
           <p class="aboutus_logo" data-aos="fade-up" data-aos-duration="800">
           </p>
 
@@ -103,12 +89,9 @@ $s_name = isset($_SESSION["s_name"])? $_SESSION["s_name"]:"";
             </span>
           </p>
 
-
           <div class="m_divider"></div>
-
       </section><!-- aboutus_section -->
     </section><!-- contents -->
-
 
     <!-- slogan -->
     <div class="slogan">
@@ -118,10 +101,7 @@ $s_name = isset($_SESSION["s_name"])? $_SESSION["s_name"]:"";
 
     <?php include "../footer.php"; ?>
 
-
   </div><!-- wrap -->
-
-  
 
   <script type="text/javascript">
     AOS.init({disable: 'mobile'});

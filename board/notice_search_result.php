@@ -1,6 +1,5 @@
 <!-- notice_search_result.php -->
 <?php
-
 // 세션 실행
 session_start();
 
@@ -8,7 +7,6 @@ $s_id = isset($_SESSION["s_id"])? $_SESSION["s_id"]:"";
 $s_name = isset($_SESSION["s_name"])? $_SESSION["s_name"]:"";
 
 include "../inc/dbcon.php";
-
 
 /* 검색 변수 */
 $category = $_GET['category'];
@@ -21,7 +19,6 @@ if($category == 'title') {
 } else {
   $keyword = '내용';
 }
-
 
 // 데이터베이스에서 페이지의 첫번째 글($no)부터
 // $page_size 만큼의 글을 가져온다.
@@ -62,8 +59,6 @@ $e_pageNum = $now_block * $page_num;
 if($e_pageNum > $total_page) { //마지막 번호가 전체 페이지 수를 넘지 않도록
   $e_pageNum = $total_page;
 };
-
-
 ?>
 <!DOCTYPE html>
 <html lang="ko">
@@ -93,14 +88,10 @@ if($e_pageNum > $total_page) { //마지막 번호가 전체 페이지 수를 넘
 
   <!-- <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script> -->
 
-
   <!-- aos -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
-
 </head>
-
 <body>
   <div class="wrap">
 
@@ -127,7 +118,6 @@ if($e_pageNum > $total_page) { //마지막 번호가 전체 페이지 수를 넘
 
     <!-- contents -->
     <section class="contents">
-
 
       <section class="notice_section">
         <h2>NOTICE & NEWS</h2>
@@ -161,19 +151,15 @@ $sql = mq("select * from notice_board where $category like '%{$search}%' order b
 /// paging : 글 번호
 $cnt = $num - ( $list_num * ($page - 1));
 
-
 // 검색결과 가져오기 (반복)
 while ( $board = $sql->fetch_array() ) {
-
 
   //댓글 수 카운트
   //reply테이블에서 con_num이 board의 idx와 같은 것을 선택
   $sql2 = mq("select * from notice_reply where con_num='$board[idx]';"); 
   //num_rows로 정수형태로 출력
   $rep_count = mysqli_num_rows($sql2); 
-
 ?>
-
 
           <tbody>
             <tr>
@@ -237,15 +223,10 @@ while ( $board = $sql->fetch_array() ) {
                 
       </section><!-- notice_section -->
 
-      
-
-
-
       <section class="search_box cfixed">
         <form action="notice_search_result.php" method="get">
           <fieldset>
             <legend class="blind">공지사항 검색</legend>
-
 
             <select name="category" class="search_sel_box">
               <option name="title" value="title">제목</option>
@@ -260,8 +241,6 @@ while ( $board = $sql->fetch_array() ) {
           </fieldset>
         </form>
       </section><!-- search_box_section -->
-
-
 
       <div class="pager">
       <?php
@@ -284,7 +263,6 @@ while ( $board = $sql->fetch_array() ) {
         <?php }; ?>
 
 
-
         <?php
         /// paging : 다음 페이지 
         if($page >= $total_page) { 
@@ -302,13 +280,9 @@ while ( $board = $sql->fetch_array() ) {
         <?php }; ?>
 
       </div><!-- pager -->
-
     </section><!-- contents -->
 
-
-
     <?php include "../footer.php"; ?>
-
 
   </div><!-- wrap -->
 

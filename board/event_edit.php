@@ -1,6 +1,5 @@
 <!-- notice_edit.php -->
 <?php
-
 include "../admin/admin_check.php";
 
 include "../inc/dbcon.php";
@@ -9,14 +8,9 @@ $bno = $_GET['idx'];
 
 $sql = mq("select * from event_board where idx='$bno';");
 $board = $sql->fetch_array();
-
-
-
 ?>
-
 <!DOCTYPE html>
 <html lang="ko">
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -33,19 +27,12 @@ $board = $sql->fetch_array();
   <link href="../css/admin_css/admin_header.css" rel="stylesheet">
   <link href="../css/board_css/notice_write.css" rel="stylesheet">
 
-
   <!-- jQuery -->
   <script src="../js/jquery-3.6.0.min.js"></script>
   <script src="../js/admin_common.js" defer></script>
-
-
-
-
-
 </head>
 
 <body>
-
   <div class="wrap">
     
     <!-- admin header -->
@@ -81,7 +68,6 @@ $board = $sql->fetch_array();
     }
     </script>
 
-
     <div class="write_section cfixed">
       <h2>이벤트 게시물 수정하기</h2>
 
@@ -91,13 +77,11 @@ $board = $sql->fetch_array();
           <fieldset class="cfixed">
             <legend class="blind">이벤트 게시물 수정하기</legend>
 
-
             <p class="auth_nm cfixed">
               <label for="auth_nm"> 작성자 </label>
               <input type="text" name="auth_nm" id="auth_nm" maxlength="10" autocomplete="off"
                 autocapitalize="off" value="<?php echo $board['auth_nm'] ?>">
             </p>
-
 
             <p class="email cfixed">
               <label for="email">이메일</label>
@@ -105,13 +89,11 @@ $board = $sql->fetch_array();
                 autocapitalize="off" value="<?php echo $board['email'] ?>">
             </p>
 
-
             <p class="pwd cfixed">
               <label for="pwd"> 비밀번호 </label>
               <input type="password" name="pwd" id="pwd" maxlength="8" placeholder="비밀번호가 맞아야 수정 가능합니다.(8자리)" autocomplete="off"
                 autocapitalize="off">
             </p>
-
 
             <p class="title cfixed">
               <label for="title" class="blind">제목</label>
@@ -119,12 +101,10 @@ $board = $sql->fetch_array();
               <span class="title_err"></span>
             </p>
 
-
             <p class="content">
               <label for="content" class="blind">내용</label>
               <textarea name="content" id="content" cols="80"><?php echo $board['content'] ?></textarea>
             </p>
-
 
             <p class="file cfixed">
               <label for="file">첨부파일: </label>
@@ -132,14 +112,11 @@ $board = $sql->fetch_array();
               <input type="file" value="1" name="file" id="file">
             </p>
 
-
             <!-- <p class="lock_post cfixed">
               <input type="checkbox" name="lock" id="lock" value="1">
               <label for="lock">비밀글로 설정합니다.</label>
             </p> -->
-
           </fieldset>
-
 
           <p class="btns cfixed">
               <button type="submit" value="수정하기">수정하기</button>
@@ -147,13 +124,8 @@ $board = $sql->fetch_array();
               <button type="button" value="뒤로가기" onclick="history.back()">돌아가기</button>
             </p>
         </form>
-      
-
     </div><!-- write_section -->
-
   </div><!-- wrap -->
-
-
 
   <!-- 폼체크 스크립트 -->
   <script type="text/javascript">
@@ -180,7 +152,6 @@ $board = $sql->fetch_array();
 
       // 비밀번호(필수) 미입력시
       if (!pwd.value) {
-
         alert("비밀번호를 입력하세요.");
         pwd.focus();
         return false;
@@ -201,7 +172,6 @@ $board = $sql->fetch_array();
         pwd.focus();
         return false;
       };
-
 
       // 제목(필수) 미입력시
       if (!title.value) {
@@ -229,5 +199,4 @@ $board = $sql->fetch_array();
   </script>
 
 </body>
-
 </html>

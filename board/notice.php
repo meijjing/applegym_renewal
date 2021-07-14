@@ -1,6 +1,5 @@
 <!-- notice.php -->
 <?php
-
 // 세션 실행
 session_start();
 

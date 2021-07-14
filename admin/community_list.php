@@ -17,7 +17,6 @@ $sql = "select * from board;";
 $result = mysqli_query($dbcon, $sql);
 $board = mysqli_fetch_array($result);
 
-
 /// paging : 전체 데이터 개수
 $num = mysqli_num_rows($result);
 
@@ -133,7 +132,6 @@ if($e_pageNum > $total_page) { //마지막 번호가 전체 페이지 수를 넘
     /// paging : 글 번호
     $cnt = $start + 1;
 
-
     // 회원정보 가져오기 (반복)
     while ( $board = mysqli_fetch_array($result) ) {
     ?>
@@ -229,13 +227,6 @@ if($e_pageNum > $total_page) { //마지막 번호가 전체 페이지 수를 넘
         location.href = "community_del_admin.php?idx=" +idx;
       };
     };
-
-
   </script>
-
-
-
-
 </body>
-
 </html>

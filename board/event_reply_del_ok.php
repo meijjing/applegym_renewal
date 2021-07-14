@@ -1,13 +1,10 @@
 <?php
-
 session_start();
 
 $s_id = isset($_SESSION["s_id"])? $_SESSION["s_id"]:"";
 $s_pwd = isset($_SESSION["s_pwd"])? $_SESSION["s_pwd"]:"";
 
-
 include "../inc/dbcon.php";
-
 
 // 1. 모달창에서 비번쳐서 삭제하는 방법
 $rno = $_POST['rno']; 
@@ -32,8 +29,6 @@ $pwd_ck = $_POST['cm_pwd'];
         // history.back();
       </script>";
 // }; 
-
-
 
 // 2. 확인메세지로 삭제하는 방법
 $sql = mq("delete from event_reply where idx=$rno;");

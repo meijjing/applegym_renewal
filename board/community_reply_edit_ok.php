@@ -1,5 +1,4 @@
 <?php
-
 include "../inc/dbcon.php";
 
 $rno = $_POST['rno'];//댓글번호

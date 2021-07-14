@@ -1,25 +1,18 @@
 <?php
-
-
 include "../inc/dbcon.php";
 
 $bno = $_GET['idx']; /* bno함수에 idx값을 받아와 넣음*/
 $sql = mq("select * from notice_board where idx='$bno'"); /* 받아온 idx값을 선택 */
 $board = $sql->fetch_array();
-
 ?>
-
-
 <!DOCTYPE html>
 <html lang="ko">
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no, 
   maximum-scale=1.0, minimum-scale=1.0">
   <title>애플짐 피트니스</title>
-
 
   <!-- favicon -->
   <link rel="shortcut icon" href="../images/favicon.ico">
@@ -141,12 +134,7 @@ $board = $sql->fetch_array();
     background-size: 20px;
   }
 </style>
-
 </head>
-
-
-
-
 <body>
 
   <!-- <div id='wr_pwd_section'>
@@ -217,8 +205,5 @@ $board = $sql->fetch_array();
   <!--- 아니면 비밀번호가 틀리다는 메시지를 보여줍니다 -->
   <?php } }; ?>
 
-
-
 </body>
-
 </html>

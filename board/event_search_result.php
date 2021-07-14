@@ -1,13 +1,10 @@
 <!-- event.php -->
 <?php
-
 // 세션 실행
 session_start();
 
 $s_id = isset($_SESSION["s_id"])? $_SESSION["s_id"]:"";
 $s_name = isset($_SESSION["s_name"])? $_SESSION["s_name"]:"";
-
-
 
 include "../inc/dbcon.php";
 
@@ -53,10 +50,7 @@ $e_pageNum = $now_block * $page_num;
 if($e_pageNum > $total_page) { //마지막 번호가 전체 페이지 수를 넘지 않도록
   $e_pageNum = $total_page;
 };
-
-
 ?>
-
 <!DOCTYPE html>
 <html lang="ko">
 
@@ -86,8 +80,6 @@ if($e_pageNum > $total_page) { //마지막 번호가 전체 페이지 수를 넘
   <!-- aos -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
-
 </head>
 
 <body>
@@ -96,14 +88,11 @@ if($e_pageNum > $total_page) { //마지막 번호가 전체 페이지 수를 넘
   <!-- 헤더 영역 -->
   <?php include "../header.php"; ?>
 
-
-
     <section class="main_section">
       <div class="main_img">
         <h2 class="blind">EVENT</h2>
         <p class="blind">애플짐은 다양한 소식을 전해드립니다.</p>
         <img src="../images/event_main.png" alt="">
-
 
         <!-- aside -->
         <aside class="aside">
@@ -116,7 +105,6 @@ if($e_pageNum > $total_page) { //마지막 번호가 전체 페이지 수를 넘
       </div>
     </section><!-- main_section -->
 
-
     <!-- contents -->
     <section class="contents">
 
@@ -124,11 +112,9 @@ if($e_pageNum > $total_page) { //마지막 번호가 전체 페이지 수를 넘
         <h2>EVENT</h2>
         <p>애플짐 전 지점의 이벤트를 만나보세요.</p>
 
-
         <h3>
           <span>'<?php echo $search; ?>'</span> 검색 결과
         </h3>
-
 
         <form class="search_box cfixed" action="event_search_result.php" method="get">
           <fieldset>
@@ -173,7 +159,6 @@ if($e_pageNum > $total_page) { //마지막 번호가 전체 페이지 수를 넘
             <div class="img_box">
               <a href="event_read.php?idx=<?php echo $board['idx']; ?>"><img src="event_upload/<?php echo $board['b_file']; ?>" alt="이벤트"></a>
             </div>
-
 
             <div class="desc_box cfixed">
 
@@ -266,11 +251,7 @@ if($e_pageNum > $total_page) { //마지막 번호가 전체 페이지 수를 넘
 
     </section><!-- contents -->
 
-
     <?php include "../footer.php" ?>
-
-
-
   </div><!-- wrap -->
 
   <script type="text/javascript">
@@ -278,5 +259,4 @@ if($e_pageNum > $total_page) { //마지막 번호가 전체 페이지 수를 넘
   </script>
 
 </body>
-
 </html>

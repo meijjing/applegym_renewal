@@ -1,18 +1,12 @@
 <!-- brand_history.php -->
 <?php
-
-// 세션 실행
 session_start();
 
 $s_id = isset($_SESSION["s_id"])? $_SESSION["s_id"]:"";
 $s_name = isset($_SESSION["s_name"])? $_SESSION["s_name"]:"";
-
 ?>
-
-
 <!DOCTYPE html>
 <html lang="ko">
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -41,10 +35,7 @@ $s_name = isset($_SESSION["s_name"])? $_SESSION["s_name"]:"";
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
-
-
 <body>
-
   <div class="wrap">
 
   <?php include "../header.php"; ?>
@@ -54,7 +45,6 @@ $s_name = isset($_SESSION["s_name"])? $_SESSION["s_name"]:"";
         <h2 class="blind">HISTORY</h2>
         <p class="blind">애플짐 피트니스 센터를 소개합니다.</p>
         <img src="../images/06-brand/history_main.png" alt="">
-
 
         <!-- aside -->
         <aside class="aside">
@@ -68,9 +58,7 @@ $s_name = isset($_SESSION["s_name"])? $_SESSION["s_name"]:"";
       </div>
     </section><!-- main_section -->
 
-
     <section class="contents">
-
       <section class="timeline_section">
 
         <div data-aos="fade-up" data-aos-duration="800" class="con con1 left">
@@ -130,7 +118,6 @@ $s_name = isset($_SESSION["s_name"])? $_SESSION["s_name"]:"";
           </div>
         </div>
     
-    
         <div data-aos="fade-up" data-aos-duration="800" class="con con9 left">
           <div class="con_text text_left">
             <h2>2007</h2>
@@ -145,7 +132,6 @@ $s_name = isset($_SESSION["s_name"])? $_SESSION["s_name"]:"";
           </div>
         </div>
     
-    
         <div data-aos="fade-up" data-aos-duration="800" class="con con11 left">
           <div class="con_text text_left">
             <h2>2004</h2>
@@ -159,11 +145,7 @@ $s_name = isset($_SESSION["s_name"])? $_SESSION["s_name"]:"";
             <p>중동점 오픈</p>
           </div>
         </div>
-    
       </section>
-
-
-
     </section>
 
     <!-- slogan -->
@@ -179,10 +161,6 @@ $s_name = isset($_SESSION["s_name"])? $_SESSION["s_name"]:"";
   <script type="text/javascript">
     AOS.init({disable: 'mobile'});
   </script>
-
-
-
-
 
 </body>
 

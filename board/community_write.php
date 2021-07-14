@@ -1,5 +1,4 @@
 <?php
-
 session_start();
 
 $s_id = isset($_SESSION["s_id"])? $_SESSION["s_id"]:"";
@@ -13,9 +12,7 @@ if(!$s_id){ // 로그인인 되지 않았다면
     </script>
   ";
 }
-
 ?>
-
 <!DOCTYPE html>
 <html lang="ko">
 
@@ -134,8 +131,6 @@ if(!$s_id){ // 로그인인 되지 않았다면
 
   </div><!-- wrap -->
 
-
-
   <!-- 폼체크 스크립트 -->
   <script type="text/javascript">
     // 저장하기 버튼 클릭시 폼 체크
@@ -148,7 +143,6 @@ if(!$s_id){ // 로그인인 되지 않았다면
       var content = document.getElementById("content");
       var pwd = document.getElementById("pwd");
       var lock = document.getElementById("lock");
-
 
       // 이름(필수) 미입력시
       if (!auth_nm.value) { 
@@ -171,10 +165,8 @@ if(!$s_id){ // 로그인인 되지 않았다면
         return false;
       };
 
-
       // 비밀번호 입력시 검증
       if(pwd.value) {
-
         if (!lock.value) {
           alert("비밀글을 체크하여 주세요.");
           lock.focus();
@@ -237,12 +229,6 @@ if(!$s_id){ // 로그인인 되지 않았다면
         });
       }
     });
-
-  
-  
   </script> -->
-
-
 </body>
-
 </html>

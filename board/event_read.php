@@ -1,6 +1,5 @@
 <!-- event_read.php -->
 <?php
-
 // 세션 실행
 session_start();
 
@@ -15,7 +14,6 @@ $bno = $_GET['idx'];
 $hit = mysqli_fetch_array(mq("select * from event_board where idx ='$bno';"));
 $hit = $hit['hit'] + 1;
 $fet = mq("update event_board set hit = '$hit' where idx = '$bno';");
-
 
 /* 받아온 idx값을 선택 */
 $sql = mq("select * from event_board where idx='$bno';"); 
@@ -39,7 +37,6 @@ $b_file = $board['b_file'];
   <link rel="icon" href="../images/favicon.ico">
   <link rel="apple-touch-icon" href="../images/favicon.ico">
 
-
   <!-- CSS -->
   <link rel="stylesheet" href="../css/reset.css">
   <link rel="stylesheet" href="../css/header.css">
@@ -56,8 +53,6 @@ $b_file = $board['b_file'];
   <!-- aos -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
-
 </head>
 
 <body>
@@ -71,7 +66,6 @@ $b_file = $board['b_file'];
         <p class="blind">애플짐은 다양한 소식을 전해드립니다.</p>
         <img src="../images/event_main.png" alt="이벤트 메인">
 
-
         <!-- aside -->
         <aside class="aside">
           <ul>
@@ -84,12 +78,9 @@ $b_file = $board['b_file'];
       </div>
     </section><!-- main_section -->
 
-
-
     <section class="notice_read_section">
 
       <div class="notice_read">
-
         <div class="notice_tit">
           <h2><?php echo $board['title']; ?></h2>
           <ul class="cfixed">
@@ -119,10 +110,7 @@ $b_file = $board['b_file'];
           <p class="notice_con">
             <?php echo nl2br("$board[content]"); ?>
           </p>
-
-
         </div>
-
 
         <button type="button" class="list_btn" onclick="location.href='event.php'">목록</button>
 
@@ -137,10 +125,6 @@ $b_file = $board['b_file'];
     </section><!-- notice_post_section -->
 
 
-
-
-
-
     <!-- 댓글 -->
     <section class="cmnt_section">
 
@@ -150,13 +134,11 @@ $b_file = $board['b_file'];
 
         <input type="hidden" name="mem_id" id="mem_id" value="<?php $s_id ?>"/>
 
-
         <?php if (!$s_id) { ?>
 
           <label for="cmnt">댓글 작성</label>
           <textarea name="cmnt" id="cmnt" placeholder="로그인 후 이용해 주세요."></textarea>
-          
-
+        
         <?php } else {; ?>
 
           <label for="cmnt">댓글 작성</label>
@@ -165,14 +147,11 @@ $b_file = $board['b_file'];
         <?php }; ?>
 
         <button type="submit" class="rep_btn">댓글</button>
-
-
         </form>
       </div><!-- cm_input -->
 
 
       <!-- 댓글 목록 불러오기 -->
-
       <?php 
       $query = "select * from event_reply where con_num='$bno' order by idx desc;";
       $result = mysqli_query($dbcon, $query);
@@ -236,7 +215,6 @@ $b_file = $board['b_file'];
           </div><!-- edit_modal_body -->
         </div><!-- cm_edit_modal -->
       
-
         <!-- 댓글 삭제하기 폼 -->
         <div id="cm_del_modal">
           <div class="del_modal_body">
@@ -351,15 +329,7 @@ $b_file = $board['b_file'];
         $(this).closest("#cm_del_modal").removeClass('active')
       });
     });
-    
-
-
   </script>
-
-
-
-
-
 
 </body>
 

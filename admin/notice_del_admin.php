@@ -13,7 +13,6 @@ mysqli_query($dbcon, $sql) or die(mysqli_error($dbcon));
 // db 종료
 mysqli_close($dbcon);
 
-
 // 페이지 이동
 echo "
     <script type=\"text/javascript\">
@@ -21,6 +20,4 @@ echo "
         history.back();
     </script>
 ";
-
-
 ?>

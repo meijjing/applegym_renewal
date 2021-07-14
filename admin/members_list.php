@@ -1,6 +1,5 @@
 <!-- members_list.php -->
 <?php
-
 // 세션 시작
 include "admin_check.php";
 
@@ -15,7 +14,6 @@ $sql = "select * from members;";
 
 // 쿼리 전송
 $result = mysqli_query($dbcon, $sql);
-
 
 /// paging : 전체 데이터 개수
 $num = mysqli_num_rows($result);
@@ -52,9 +50,7 @@ if($e_pageNum > $total_page) { //마지막 번호가 전체 페이지 수를 넘
 };
 
 // db 종료
-
 ?>
-
 <!DOCTYPE html>
 <html lang="ko">
 
@@ -87,11 +83,9 @@ if($e_pageNum > $total_page) { //마지막 번호가 전체 페이지 수를 넘
       color: #000!important;
     }
   </style>
-
 </head>
 
 <body>
-
   <div class="wrap">
 
   <?php include "admin_header.php"; ?>
@@ -117,8 +111,6 @@ if($e_pageNum > $total_page) { //마지막 번호가 전체 페이지 수를 넘
             <th class="delete">삭제</th>
           </tr>
         </thead>
-
-
         <?php
 
     /// paging : 시작 번호 = (현재 페이지 번호 - 1) * 페이지 당 보여질 데이터 수 (idx 와 글번호는 다를 수 있으니까)
@@ -128,19 +120,14 @@ if($e_pageNum > $total_page) { //마지막 번호가 전체 페이지 수를 넘
     $sql = "select * from members limit $start, $list_num;";
     // $sql = "select * from members limit $start, $list_num;"; -> 오름차순 내림차순
 
-
     /// paging : 쿼리 전송
     $result = mysqli_query($dbcon, $sql);
-
 
     /// paging : 글 번호
     $cnt = $start + 1;
 
-
-
     // 회원정보 가져오기 (반복)
     while ( $array = mysqli_fetch_array($result) ) {
-
     ?>
 
         <tbody>
@@ -165,18 +152,12 @@ if($e_pageNum > $total_page) { //마지막 번호가 전체 페이지 수를 넘
         </tbody>
 
         <?php
-      
-      $cnt = $cnt + 1;
-  
-      }; 
-  
-    ?>
-
+          $cnt = $cnt + 1;
+          };   
+        ?>
       </table>
 
-
       <div class="pager">
-
       <?php
       /// paging : 이전 페이지 
       if($page <= 1) { 
@@ -192,7 +173,7 @@ if($e_pageNum > $total_page) { //마지막 번호가 전체 페이지 수를 넘
       /// paging : 페이지 번호 출력
       // for(초기값; 최종갑; 증감량)
       for($print_page = $s_pageNum; $print_page <= $e_pageNum; $print_page++) {
-?>
+      ?>
 
         <a class="num_btn" href="members_list.php?page=<?php echo $print_page; ?>"><?php echo $print_page; ?></a>
 
@@ -215,7 +196,6 @@ if($e_pageNum > $total_page) { //마지막 번호가 전체 페이지 수를 넘
     </section>
 
     <footer class="footer">
-
     </footer>
 
   </div><!-- wrap -->
@@ -235,8 +215,5 @@ if($e_pageNum > $total_page) { //마지막 번호가 전체 페이지 수를 넘
     };
   </script>
 
-
-
 </body>
-
 </html>

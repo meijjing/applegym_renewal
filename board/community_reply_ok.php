@@ -1,5 +1,4 @@
 <?php
-
 session_start();
 
 $s_id = isset($_SESSION["s_id"])? $_SESSION["s_id"]:"";

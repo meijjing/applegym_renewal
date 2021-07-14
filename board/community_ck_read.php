@@ -1,16 +1,12 @@
 <?php
-
-
 include "../inc/dbcon.php";
 
 $bno = $_GET['idx']; /* bno함수에 idx값을 받아와 넣음*/
 $sql = mq("select * from board where idx='$bno'"); /* 받아온 idx값을 선택 */
 $board = $sql->fetch_array();
-
 ?>
 <!DOCTYPE html>
 <html lang="ko">
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -23,11 +19,8 @@ $board = $sql->fetch_array();
   <link rel="icon" href="../images/favicon.ico">
   <link rel="apple-touch-icon" href="../images/favicon.ico">
 
-  
   <script src="../js/jquery-3.6.0.min.js"></script>
-
 <style>
-
   .blind {
     position: absolute;
     width: 0;
@@ -45,7 +38,6 @@ $board = $sql->fetch_array();
     left: 0;
     top: 0;
     background: rgba(0, 0, 0, .5);
-
     z-index: 1;
     /* display: none; */
   }
@@ -76,7 +68,6 @@ $board = $sql->fetch_array();
     margin: 0px auto;
     margin-bottom: 20px;
   }
-
 
   .ck_read_modal_body form {
     width: 80%;
@@ -128,12 +119,10 @@ $board = $sql->fetch_array();
     background: url('../images/main/close.png') no-repeat center;
     background-size: 20px;
     text-indent: -9999px;
-
     border: none;
     position: absolute;
     top: 10px;
     right: 10px;
-
     cursor: pointer;
   }
 
@@ -142,7 +131,6 @@ $board = $sql->fetch_array();
     background-size: 20px;
   }
 </style>
-
 </head>
 
 <body>
@@ -187,7 +175,6 @@ $board = $sql->fetch_array();
   </div> -->
 
   <script type="text/javascript">
-
     function form_check(frm) {
       var pwd = $('#pwd_chk');
 
@@ -196,11 +183,8 @@ $board = $sql->fetch_array();
         history.back();
         return false;
       }
-
     frm.submit();
-
     };
-
   </script>
 
 
@@ -208,7 +192,6 @@ $board = $sql->fetch_array();
 	$bpwd = $board['pwd'];
 
   if(isset($_POST['pwd_chk'])) {//만약 pwd_chk POST값이 있다면
-  
     $pwd_ck = $_POST['pwd_chk']; // $pwk변수에 POST값으로 받은 pwd_chk를 넣습니다.
 
     // if(password_verify($pwk,$bpw)) {//다시 if문으로 DB의 pwd와 입력하여 받아온 pwk와 값이 같은지 비교를 하고    
@@ -223,7 +206,6 @@ $board = $sql->fetch_array();
 
 
   <?php 
-
 			} else { ?>
     <script type="text/javascript">
       alert('비밀번호를 확인해주세요.');
@@ -232,8 +214,5 @@ $board = $sql->fetch_array();
   <!--- 아니면 비밀번호가 틀리다는 메시지를 보여줍니다 -->
   <?php } }; ?>
 
-
-
 </body>
-
 </html>

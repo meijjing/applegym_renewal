@@ -96,9 +96,6 @@
 
 <body>
 
-
-
-
   <div style="margin-top:50px">
     <input id="imageFile" type="file">
   </div>
@@ -111,12 +108,8 @@
     <img src="" id="output">
   </div>
 </body>
-
 </html>
-
-
 <?
-
     // 업로드 폴더 지정
     $uploads_dir = 'upload';
     $allowed_ext = array('jpg','jpeg','png','gif');  // 업로드 허용되는 확장자 지정

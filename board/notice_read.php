@@ -1,6 +1,5 @@
 <!-- notice_read.php -->
 <?php
-
 // 세션 실행
 session_start();
 
@@ -16,13 +15,10 @@ $hit = mysqli_fetch_array(mq("select * from notice_board where idx ='$bno';"));
 $hit = $hit['hit'] + 1;
 $fet = mq("update notice_board set hit = '$hit' where idx = '$bno';");
 
-
 /* 받아온 idx값을 선택 */
 $sql = mq("select * from notice_board where idx='$bno';"); 
 $board = $sql->fetch_array();
-
 $b_file = $board['b_file'];
-
 ?>
 <!DOCTYPE html>
 <html lang="ko">
@@ -38,7 +34,6 @@ $b_file = $board['b_file'];
   <link rel="shortcut icon" href="../images/favicon.ico">
   <link rel="icon" href="../images/favicon.ico">
   <link rel="apple-touch-icon" href="../images/favicon.ico">
-
 
   <!-- CSS -->
   <link rel="stylesheet" href="../css/reset.css">
@@ -59,10 +54,8 @@ $b_file = $board['b_file'];
 
 
 </head>
-
 <body>
   <div class="wrap">
-
   <?php include "../header.php"; ?>
 
     <section class="main_section">
@@ -70,7 +63,6 @@ $b_file = $board['b_file'];
         <h2 class="blind">NOTICE</h2>
         <p class="blind">애플짐은 다양한 소식을 전해드립니다.</p>
         <img src="../images/notice_main.png" alt="">
-
 
         <!-- aside -->
         <aside class="aside">
@@ -84,12 +76,8 @@ $b_file = $board['b_file'];
       </div>
     </section><!-- main_section -->
 
-
-
     <section class="notice_read_section">
-
       <div class="notice_read">
-
         <div class="notice_tit">
           <h2><?php echo $board['title']; ?></h2>
           <ul class="cfixed">
@@ -120,9 +108,7 @@ $b_file = $board['b_file'];
             <?php echo nl2br("$board[content]"); ?>
           </p>
 
-
         </div>
-
 
         <button type="button" class="list_btn" onclick="location.href='notice.php'">목록</button>
 
@@ -161,27 +147,16 @@ $b_file = $board['b_file'];
     <!-- notice_del_modal -->
 
 
-
-
-
-
-
     <!-- 댓글 -->
     <section class="cmnt_section">
-
       <!-- 댓글 입력 폼 -->
       <div class="cm_input">
         <form action="notice_reply_ok.php?idx=<?php echo $bno; ?>" method="post" class="cm_input cfixed">
-
         <input type="hidden" name="mem_id" id="mem_id" value="<?php $s_id ?>"/>
 
-
         <?php if (!$s_id) { ?>
-
           <label for="cmnt">댓글 작성</label>
           <textarea name="cmnt" id="cmnt" placeholder="로그인 후 이용해 주세요."></textarea>
-          
-
         <?php } else {; ?>
 
           <label for="cmnt">댓글 작성</label>
@@ -190,14 +165,11 @@ $b_file = $board['b_file'];
         <?php }; ?>
 
         <button type="submit" class="rep_btn">댓글</button>
-
-
         </form>
       </div><!-- cm_input -->
 
 
       <!-- 댓글 목록 불러오기 -->
-
       <?php 
       $query = "select * from notice_reply where con_num='$bno' order by idx desc;";
       $result = mysqli_query($dbcon, $query);
@@ -292,12 +264,10 @@ $b_file = $board['b_file'];
 
     <?php include "../footer.php"; ?>
 
-
   </div><!-- wrap -->
 
   <script type="text/javascript">
     AOS.init({disable: 'mobile'});
-
 
     // 게시글 삭제 
     function del_post(idx) {
@@ -306,7 +276,6 @@ $b_file = $board['b_file'];
         location.href = "notice_del_ok.php?idx="+idx;
       };
     };
-
 
     // 게시글 삭제 모달창
     // $(function(){
@@ -376,16 +345,7 @@ $b_file = $board['b_file'];
         $(this).closest("#cm_del_modal").removeClass('active')
       });
     });
-    
-
-
   </script>
 
-
-
-
-
-
 </body>
-
 </html>

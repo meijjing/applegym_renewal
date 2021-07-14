@@ -2,13 +2,8 @@
   <img src="../images/main/fooder-divider.png" alt="no">
 </div>
 
-
-
 <footer class="footer">
-
   <h2 class="blind"><a href="#">사이트 이용안내</a></h2>
-
-
   <div class="footer_bg">
 
     <div class="applegym-info">

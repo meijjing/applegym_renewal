@@ -19,15 +19,10 @@
     $folder = "event_upload/".$filename;
     move_uploaded_file($tmpfile, $folder);
 
-
-
-
     // 글의 pwd를 가져온다.
     $query = "SELECT * FROM event_board WHERE idx=$bno;";
     $result = mysqli_query($dbcon, $query);
     $board = mysqli_fetch_array($result);
-
-
 
     if (password_verify($_POST['pwd'], $board['pwd'])) {
 
@@ -50,6 +45,5 @@
         ");
         exit;// exit 안쓰면 아래의 코드가 실행 됨.
     }
-
 ?>
 

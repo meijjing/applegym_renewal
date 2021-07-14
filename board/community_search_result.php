@@ -1,14 +1,11 @@
 <!-- community_search_result.php -->
 <?php
-
-// 세션 실행
 session_start();
 
 $s_id = isset($_SESSION["s_id"])? $_SESSION["s_id"]:"";
 $s_name = isset($_SESSION["s_name"])? $_SESSION["s_name"]:"";
 
 include "../inc/dbcon.php";
-
 
 /* 검색 변수 */
 $category = $_GET['category'];
@@ -21,7 +18,6 @@ if($category == 'title') {
 } else {
   $keyword = '내용';
 }
-
 
 // 데이터베이스에서 페이지의 첫번째 글($no)부터
 // $page_size 만큼의 글을 가져온다.
@@ -91,12 +87,9 @@ if($e_pageNum > $total_page) { //마지막 번호가 전체 페이지 수를 넘
 
   <!-- <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script> -->
 
-
   <!-- aos -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
-
 </head>
 
 <body>
@@ -159,14 +152,10 @@ $sql = mq("select * from board where $category like '%{$search}%' order by idx d
 /// paging : 쿼리 전송
 // $result = mysqli_query($dbcon, $sql);
 
-
 /// paging : 글 번호
 $cnt = $num - ( $list_num * ($page - 1));
 
-
-
 // 검색결과 가져오기 (반복)
-
 while ( $board = $sql->fetch_array() ) {
 
   //댓글 수 카운트
@@ -283,8 +272,6 @@ while ( $board = $sql->fetch_array() ) {
 
         <?php }; ?>
 
-
-
         <?php
         /// paging : 다음 페이지 
         if($page >= $total_page) { 
@@ -294,7 +281,6 @@ while ( $board = $sql->fetch_array() ) {
           <!-- ">다음</a> -->
           <a class="list_next_btn" href="#">다음</a>
 
-
         <?php } else { ?>
 
           <a class="list_next_btn" href="community.php?page=<?php echo ($page + 1); ?>">다음</a>
@@ -302,20 +288,14 @@ while ( $board = $sql->fetch_array() ) {
         <?php }; ?>
 
       </div><!-- pager -->
-
     </section><!-- contents -->
 
-
-
     <?php include "../footer.php"; ?>
-
 
   </div><!-- wrap -->
 
   <script type="text/javascript">
     AOS.init({disable: 'mobile'});
-
-
 
     // 게시물 비밀글 비번 모달창
     $(function(){

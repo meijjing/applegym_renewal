@@ -1,7 +1,5 @@
 <!-- community.php -->
 <?php
-
-// 세션 실행
 session_start();
 
 $s_id = isset($_SESSION["s_id"])? $_SESSION["s_id"]:"";
@@ -48,8 +46,6 @@ $e_pageNum = $now_block * $page_num;
 if($e_pageNum > $total_page) { //마지막 번호가 전체 페이지 수를 넘지 않도록
   $e_pageNum = $total_page;
 };
-
-
 ?>
 <!DOCTYPE html>
 <html lang="ko">
@@ -66,7 +62,6 @@ if($e_pageNum > $total_page) { //마지막 번호가 전체 페이지 수를 넘
   <link rel="icon" href="../images/favicon.ico">
   <link rel="apple-touch-icon" href="../images/favicon.ico">
 
-
   <!-- CSS -->
   <link rel="stylesheet" href="../css/reset.css">
   <link rel="stylesheet" href="../css/header.css">
@@ -79,12 +74,9 @@ if($e_pageNum > $total_page) { //마지막 번호가 전체 페이지 수를 넘
 
   <!-- <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script> -->
 
-
   <!-- aos -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
-
 </head>
 
 <body>
@@ -114,7 +106,6 @@ if($e_pageNum > $total_page) { //마지막 번호가 전체 페이지 수를 넘
     <!-- contents -->
     <section class="contents">
 
-
       <section class="community_section">
         <h2>COMMUNITY</h2>
         <p>애플짐과 함께하는 정보 공유</p>
@@ -133,7 +124,6 @@ if($e_pageNum > $total_page) { //마지막 번호가 전체 페이지 수를 넘
 
 <!-- 글목록 가져오기 -->
 <?php
-
 /// paging : 시작 번호 = (현재 페이지 번호 - 1) * 페이지 당 보여질 데이터 수 (idx 와 글번호는 다를 수 있으니까)
 $start = ($page - 1) * $list_num;
 
@@ -142,14 +132,11 @@ $sql = "select * from board order by idx desc limit $start, $list_num;";
 // $sql = "select * from board limit $start, $list_num;";
 // $sql = "select * from members limit $start, $list_num;"; -> 오름차순 내림차순
 
-
 /// paging : 쿼리 전송
 $result = mysqli_query($dbcon, $sql);
 
-
 /// paging : 글 번호
 $cnt = $num - ( $list_num * ($page - 1));
-
 
 // 회원정보 가져오기 (반복)
 while ( $board = mysqli_fetch_array($result) ) {
@@ -163,15 +150,12 @@ while ( $board = mysqli_fetch_array($result) ) {
   //   $title = str_replace($board["title"], mb_substr($board["title"], 0, 20, "utf-8")."...", $board["title"]);
   // };
 
-
   //댓글 수 카운트
   //reply테이블에서 con_num이 board의 idx와 같은 것을 선택
   $sql2 = mq("select * from reply where con_num='$board[idx]';"); 
   //num_rows로 정수형태로 출력
   $rep_count = mysqli_num_rows($sql2); 
-
 ?>
-
 
           <tbody>
             <tr>
@@ -230,13 +214,9 @@ while ( $board = mysqli_fetch_array($result) ) {
 
         <button type="button" class="wr_btn" onclick="location.href='community_write.php'">글쓰기</button>
 
-                
       </section><!-- community_section -->
 
       
-
-
-
       <section class="search_box cfixed">
         <form action="community_search_result.php" method="get">
           <fieldset>
@@ -256,8 +236,6 @@ while ( $board = mysqli_fetch_array($result) ) {
         </form>
       </section><!-- search_box_section -->
 
-
-
       <div class="pager">
       <?php
       /// paging : 이전 페이지 
@@ -273,12 +251,9 @@ while ( $board = mysqli_fetch_array($result) ) {
       // for(초기값; 최종갑; 증감량)
       for($print_page = $s_pageNum; $print_page <= $e_pageNum; $print_page++) {
       ?>
-
         <a class="num_btn" href="community.php?page=<?php echo $print_page; ?>"><?php echo $print_page; ?></a>
 
         <?php }; ?>
-
-
 
         <?php
         /// paging : 다음 페이지 
@@ -301,18 +276,12 @@ while ( $board = mysqli_fetch_array($result) ) {
     </section><!-- contents -->
 
 
-
-
-
-
     <?php include "../footer.php"; ?>
 
   </div><!-- wrap -->
 
   <script type="text/javascript">
     AOS.init({disable: 'mobile'});
-
-
 
     // 게시물 비밀글 비번 모달창
     $(function(){
@@ -328,5 +297,4 @@ while ( $board = mysqli_fetch_array($result) ) {
   </script>
 
 </body>
-
 </html>

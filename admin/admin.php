@@ -1,7 +1,5 @@
 <?php 
-
 include "admin_check.php";
-
 ?>
 <!DOCTYPE html>
 <html lang="ko">
@@ -33,22 +31,16 @@ include "admin_check.php";
 <body>
   <div class="wrap">
 
-
     <?php include "admin_header.php" ?>
 
-
     <section class="admin_section">
-      <h2> 관리자 페이지 입니다.</h2>
-      
-
+      <h2> 관리자 페이지 입니다.</h2>      
     </section>
 
     <footer class="footer">
-
     </footer>
 
   </div><!-- wrap -->
-
 
   <script type="text/javascript">
     jQuery(document).ready(function () {
@@ -66,5 +58,4 @@ include "admin_check.php";
     });
   </script>
 </body>
-
 </html>

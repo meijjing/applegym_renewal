@@ -19,22 +19,16 @@
     $folder = "notice_upload/".$filename;
     move_uploaded_file($tmpfile, $folder);
 
-
-
     // 글의 pwd를 가져온다.
     $query = "SELECT * FROM notice_board WHERE idx=$bno;";
     $result = mysqli_query($dbcon, $query);
     $board = mysqli_fetch_array($result);
-
-
-
 
     // 입력된 값과 비교한다.
     // if ($_POST['pwd'] == $board['pwd']) { //비밀번호가 일치하는 경우
     if (password_verify($_POST['pwd'], $board['pwd'])) {
 
         $sql = mq("update notice_board set auth_nm='$auth_nm', pwd='$pwd', email='$email', title='$title', content='$content', b_file='$o_name' where idx='$bno';");
-
 
         // $query = "UPDATE notice_board SET auth_nm='$auth_nm', email='$email', title='$title', content='$content' WHERE idx=$bno";
         // $result=mysqli_query($dbcon, $query);

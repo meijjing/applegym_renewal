@@ -1,12 +1,8 @@
 <?php
-
-
 // 세션 실행
 // session_start();
 // $s_idx = isset($_SESSION["s_idx"])? $_SESSION["s_idx"]:"";
-
 include "admin_check.php";
-
 
 // db 연결
 include "../inc/dbcon.php";
@@ -14,21 +10,13 @@ include "../inc/dbcon.php";
 // 선택한 사용자 정보
 $g_idx = $_GET["g_idx"];
 
-
 // 쿼리 작성
 $sql = "select * from members where idx=$g_idx;" ;
-// echo $sql;
-// exit;
-
 
 // db에 쿼리 전송
 $result = mysqli_query($dbcon, $sql) or die(mysqli_error($dbcon));
-// echo '$result';
-// exit;
-
 
 // db에서 값 가져오기
-
   // mysqli_fetch_row(전달쿼리(객체));  -> 필드 순서
   // mysqli_fetch_array(전송쿼리(객체)) : 필드명
   // mysqli_num_rows : 결과행의 개수
@@ -38,14 +26,11 @@ $result = mysqli_query($dbcon, $sql) or die(mysqli_error($dbcon));
   //   echo $array;
   // }
 
-
   // db 종료
   mysqli_close($dbcon);
 
   // 사용자 정보 출력
-
 ?>
-
 <!DOCTYPE html>
 <html lang="ko">
 
@@ -194,20 +179,12 @@ $result = mysqli_query($dbcon, $sql) or die(mysqli_error($dbcon));
             <p class="close_btn">
               <button type="button" class="btn_close" onclick="history.back()">닫기</button>
             </p>
-
-
-
           </fieldset>
         </form>
         </div><!-- edit_pg -->
-
       </div><!-- edit_section -->
 
-
-
-
   </div><!-- wrap -->
-
     <!-- 정보수정 스크립트 -->
     <script type="text/javascript">
     // 정보수정 버튼 클릭시 폼 체크
@@ -241,7 +218,6 @@ $result = mysqli_query($dbcon, $sql) or die(mysqli_error($dbcon));
       //     return false;
       //   };
       
-
       // 비밀번호 공백 검증
       if (/[\s]/.test(mem_pwd.value) == true) {
       // alert("비밀번호는 공백없이 입력해주세요.");
@@ -259,7 +235,6 @@ $result = mysqli_query($dbcon, $sql) or die(mysqli_error($dbcon));
         mem_pwd.focus();
         return false;
       }
-
 
       // 비밀번호 확인 입력
       if (re_pwd.value == '') {
@@ -307,17 +282,14 @@ $result = mysqli_query($dbcon, $sql) or die(mysqli_error($dbcon));
 
 
       return true;
-
       // /* 1 */ document.signform.submit();
       /* 2, 3 */
       // frm.submit();
     };
 
-
     /*--------------------------------
     이메일 도메인 옵션 정하기
     ----------------------------------*/
-
     function email_change() {
       // alert("Test");
       var email_dns = document.getElementById("email_dns");
@@ -332,27 +304,18 @@ $result = mysqli_query($dbcon, $sql) or die(mysqli_error($dbcon));
       email_dns.value = get_text;
     };
 
-
     /* -----------------------------
     주소 검색
     ------------------------------- */
     // function search_address() {
-    //   // window.open("팝업될 문서경로", "팝업된 문서이름", "옵션(크기, 위치, bar 표시)");
+    //// window.open("팝업될 문서경로", "팝업된 문서이름", "옵션(크기, 위치, bar 표시)");
     //   window.open("../02-01-join-search_id_ajax.php", "addr", "width=500, height=400, left=0, top=0");
-
     // };
-
     // window.open(" ", " ", " ") <- 매게 변수 3개
-
 
     function DaumPostcode() {
       new daum.Postcode({
         oncomplete: function (data) {
-          // 팝업에서 검색결과 항목을 클릭했을때 실행할 코드를 작성하는 부분입니다.
-          // 예제를 참고하여 다양한 활용법을 확인해 보세요.
-
-          // 도로명 주소의 노출 규칙에 따라 주소를 표시한다.
-          // 내려오는 변수가 값이 없는 경우엔 공백('')값을 가지므로, 이를 참고하여 분기 한다.
           var roadAddr = data.roadAddress; // 도로명 주소 변수
           var extraRoadAddr = ''; // 참고 항목 변수
 
@@ -384,7 +347,6 @@ $result = mysqli_query($dbcon, $sql) or die(mysqli_error($dbcon));
           //   document.getElementById("extra_addr").value = '';
           // };
 
-
           var guideTextBox = document.getElementById("guide");
             // 사용자가 '선택 안함'을 클릭한 경우, 예상 주소라는 표시를 해준다.
             if(data.autoRoadAddress) {
@@ -401,14 +363,9 @@ $result = mysqli_query($dbcon, $sql) or die(mysqli_error($dbcon));
                 guideTextBox.style.display = 'none';
             };
         } // oncomplete
-
       }).open(); // Postcoed
-      
-
     }; // DaumPostcode()
     
-
-
 
     // 탈퇴하기 버튼 클릭시 
     function del_mem() {
@@ -419,16 +376,11 @@ $result = mysqli_query($dbcon, $sql) or die(mysqli_error($dbcon));
         // location.href = " delete.php?idx=
         // <?php //echo $s_idx; ?> 
         // ";
-
         location.href = "delete.php";
       } else {
         history.back();
       };
     };
   </script>
-
-
-
 </body>
-
 </html>

@@ -1,18 +1,12 @@
 <!-- brand_business.php -->
 <?php
-
-// 세션 실행
 session_start();
 
 $s_id = isset($_SESSION["s_id"])? $_SESSION["s_id"]:"";
 $s_name = isset($_SESSION["s_name"])? $_SESSION["s_name"]:"";
-
 ?>
-
-
 <!DOCTYPE html>
 <html lang="ko">
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -24,7 +18,6 @@ $s_name = isset($_SESSION["s_name"])? $_SESSION["s_name"]:"";
   <link rel="shortcut icon" href="../images/favicon.ico">
   <link rel="icon" href="../images/favicon.ico">
   <link rel="apple-touch-icon" href="../images/favicon.ico">
-
 
   <!-- CSS -->
   <link rel="stylesheet" href="../css/reset.css">
@@ -41,10 +34,7 @@ $s_name = isset($_SESSION["s_name"])? $_SESSION["s_name"]:"";
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
-
-
 <body>
-
   <div class="wrap">
 
   <?php include "../header.php"; ?>
@@ -54,7 +44,6 @@ $s_name = isset($_SESSION["s_name"])? $_SESSION["s_name"]:"";
         <h2 class="blind">BUSINESS</h2>
         <p class="blind">애플짐 피트니스 센터를 소개합니다.</p>
         <img src="../images/06-brand/business_main.png" alt="">
-
 
         <!-- aside -->
         <aside class="aside">
@@ -68,10 +57,7 @@ $s_name = isset($_SESSION["s_name"])? $_SESSION["s_name"]:"";
       </div>
     </section><!-- main_section -->
 
-
     <section class="contents">
-
-
       <section class="business_section">
         <h2 class="blind">애플짐 사업영역</h2>
 

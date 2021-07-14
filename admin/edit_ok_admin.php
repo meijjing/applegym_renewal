@@ -1,16 +1,10 @@
 <?php
-
   // 세션 연결
   session_start();   
-
   $s_idx = isset($_SESSION["s_idx"])? $_SESSION["s_idx"]:"";
-
-
-
 
   /* 이전 페이지에서 값 가져오기 */
   $g_idx = $_POST["g_idx"];
-
   $mem_pwd = $_POST["mem_pwd"];
   $tel_no = $_POST["tel_no"];
   $mem_pwd = password_hash($_POST["mem_pwd"], PASSWORD_DEFAULT);
@@ -25,13 +19,8 @@
   $addr1 = $_POST["addr1"];
   $addr2 = $_POST["addr2"];
 
-
-
-
   // db 연결
   include "../inc/dbcon.php";
-
-
 
   // 조건 처리 & 쿼리 작성
   if ($mem_pwd) { // 비밀번호 입력시
@@ -55,21 +44,12 @@
               addr2 = '$addr2' 
               WHERE idx=$g_idx; ";
   };
-  // echo $sql;
-  // exit;
-
-
-
 
   // db에 쿼리 전송
   mysqli_query($dbcon, $sql) or die(mysqli_error($dbcon));
 
-
-
   // db 연결 종료
   mysqli_close($dbcon);
-
-
 
   // 결과페이지로 이동
   echo "
@@ -80,5 +60,4 @@
   </script>
 
 ";
-
 ?>

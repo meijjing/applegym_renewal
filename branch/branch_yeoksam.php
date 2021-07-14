@@ -1,18 +1,12 @@
 <!-- branch_yeoksam.php -->
 <?php
-
-// 세션 실행
 session_start();
 
 $s_id = isset($_SESSION["s_id"])? $_SESSION["s_id"]:"";
 $s_name = isset($_SESSION["s_name"])? $_SESSION["s_name"]:"";
-
 ?>
-
-
 <!DOCTYPE html>
 <html lang="ko">
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -24,7 +18,6 @@ $s_name = isset($_SESSION["s_name"])? $_SESSION["s_name"]:"";
   <link rel="shortcut icon" href="../images/favicon.ico">
   <link rel="icon" href="../images/favicon.ico">
   <link rel="apple-touch-icon" href="../images/favicon.ico">
-
 
   <!-- CSS -->
   <link rel="stylesheet" href="../css/reset.css">
@@ -48,10 +41,7 @@ $s_name = isset($_SESSION["s_name"])? $_SESSION["s_name"]:"";
   <!-- slick -->
   <link rel="stylesheet" href="../css/slick.css">
   <script src="../js/slick.min.js" defer></script>
-
 </head>
-
-
 <body>
   <div id="wrap">
 
@@ -63,7 +53,6 @@ $s_name = isset($_SESSION["s_name"])? $_SESSION["s_name"]:"";
         <p class="blind">역삼동 1500평 대형 피트니스 센터</p>
         <img src="../images/07-branch/yeoksam_main.jpg" alt="">
 
-
         <!-- aside -->
         <aside class="aside">
           <ul>
@@ -73,12 +62,8 @@ $s_name = isset($_SESSION["s_name"])? $_SESSION["s_name"]:"";
               </a></li>
           </ul>
         </aside>
-
-
       </div>
     </section>
-
-
 
     <!-- contents -->
     <section class="contents">
@@ -91,7 +76,6 @@ $s_name = isset($_SESSION["s_name"])? $_SESSION["s_name"]:"";
           <p class="blind">역삼동 1500평 대형 피트니스 센터</p>
           <img data-aos="fade-right" data-aos-duration="800" class="info_img" src="../images/07-branch/yeoksam_info.png"
             alt="">
-
 
           <div class="intro_wrap cfixed">
 
@@ -125,11 +109,8 @@ $s_name = isset($_SESSION["s_name"])? $_SESSION["s_name"]:"";
             </div>
 
             <div class="divider pc_divider"></div>
-
-
           </div><!-- intro_wrap -->
         </div><!-- container-->
-
       </section><!-- intro-section -->
 
 
@@ -148,35 +129,29 @@ $s_name = isset($_SESSION["s_name"])? $_SESSION["s_name"]:"";
               <p class="blind">PT</p>
               <img src="../images/07-branch/pt_icon.png" alt="">
               <p class="program_desc">대한스포츠의학재단 소속<br>트레이너의 전문적인<br>퍼스널트레이닝</p>
-
             </li>
 
             <li data-aos="fade-right" data-aos-duration="800" class="program_gx">
               <p class="blind">G.X</p>
               <img src="../images/07-branch/gx_icon.png" alt="">
               <p class="program_desc">최상의 전문강사와<br>함께 하는<br>30여가지의 GX프로그램</p>
-
             </li>
 
             <li data-aos="fade-right" data-aos-duration="800" class="program_pilates">
               <p class="blind">PILATES</p>
               <img src="../images/07-branch/pilates_icon.png" alt="">
               <p class="program_desc">대한스포츠의학재단 소속<br>전문 필라테스강사<br>100% 기구필라테스</p>
-
             </li>
 
             <li data-aos="fade-right" data-aos-duration="800" class="program_sauna">
               <p class="blind">SAUNA</p>
               <img src="../images/07-branch/sauna_icon.png" alt="">
               <p class="program_desc">운동도하고 땀도 빼고<br>하루에 쌓였던 피로도<br>날려보내요!</p>
-
             </li>
 
           </ul>
         </div><!-- container-->
       </section><!-- program_section -->
-
-
       <div class="m_divider"></div>
 
 
@@ -207,13 +182,8 @@ $s_name = isset($_SESSION["s_name"])? $_SESSION["s_name"]:"";
             <li><img src="../images/07-branch/yeoksam_img6.jpg" alt=""></li>
             <li><img src="../images/07-branch/yeoksam_img7.jpg" alt=""></li>
           </ul>
-
         </div>
-
-
       </section><!-- gallery -->
-
-
 
 
       <!-- 스케쥴 -->
@@ -284,69 +254,15 @@ $s_name = isset($_SESSION["s_name"])? $_SESSION["s_name"]:"";
       <p><img src="../images/slogan.png" alt=""><span class="blind">DREAMS COME TRUE</span></p>
     </div>
 
-
-
     <?php include "../footer.php"; ?>
 
-
   </div><!-- wrap -->
-
-
 
   <script type="text/javascript">
     AOS.init({disable: 'mobile'});  
   </script>
 
-
-
-
-
-
 <script type="text/javascript"> 
-  //   // daum map
-  //   var container = document.getElementById('map'); //지도를 담을 영역의 DOM 레퍼런스
-  //   var options = { //지도를 생성할 때 필요한 기본 옵션
-  //     center: new kakao.maps.LatLng(37.499598, 127.048295), //지도의 중심좌표.
-  //     level: 3 //지도의 레벨(확대, 축소 정도)
-  //   };
-
-  //   var map = new kakao.maps.Map(container, options); //지도 생성 및 객체 리턴
-
-  //   var imageSrc = 'images/07-branch/placeholder.png', // 마커이미지의 주소입니다    
-  //     imageSize = new kakao.maps.Size(50, 50), // 마커이미지의 크기입니다
-  //     imageOption = {offset: new kakao.maps.Point(40, 20)}; // 마커이미지의 옵션입니다. 마커의 좌표와 일치시킬 이미지 안에서의 좌표를 설정합니다.
-
-  // // 마커의 이미지정보를 가지고 있는 마커이미지를 생성합니다
-  // var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize, imageOption),
-  //     markerPosition = new kakao.maps.LatLng(37.499575, 127.048529); // 마커가 표시될 위치입니다
-
-  // // 마커를 생성합니다
-  // var marker = new kakao.maps.Marker({
-  //   position: markerPosition,
-  //   image: markerImage // 마커이미지 설정 
-  // });
-
-  // // 마커가 지도 위에 표시되도록 설정합니다
-  // marker.setMap(map); 
-
-  // // 커스텀 오버레이에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
-  // var content = '<div class="customoverlay">' +
-  //     '<a href="https://map.kakao.com/?nil_profile=title&nil_src=local" target="_blank">' +
-  //     '<span class="title">애플짐 역삼점</span>' +
-  //     '</a>' +
-  //     '</div>';
-
-  // // 커스텀 오버레이가 표시될 위치입니다 
-  // var position = new kakao.maps.LatLng(37.49913462455498, 127.04845645560057);  
-
-  // // 커스텀 오버레이를 생성합니다
-  // var customOverlay = new kakao.maps.CustomOverlay({
-  //     map: map,
-  //     position: position,
-  //     content: content,
-  //     yAnchor: 1 
-  // });
-
 
   //지도를 삽입할 HTML 요소 또는 HTML 요소의 id를 지정합니다.
   var mapDiv = document.getElementById('map'); // 'map'으로 선언해도 동일

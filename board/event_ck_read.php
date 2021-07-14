@@ -1,12 +1,9 @@
 <?php
-
-
 include "../inc/dbcon.php";
 
 $bno = $_GET['idx']; /* bno함수에 idx값을 받아와 넣음*/
 $sql = mq("select * from event_board where idx='$bno'"); /* 받아온 idx값을 선택 */
 $board = $sql->fetch_array();
-
 ?>
 <!DOCTYPE html>
 <html lang="ko">
@@ -23,11 +20,8 @@ $board = $sql->fetch_array();
   <link rel="icon" href="../images/favicon.ico">
   <link rel="apple-touch-icon" href="../images/favicon.ico">
 
-  
   <script src="../js/jquery-3.6.0.min.js"></script>
-
 <style>
-
   .blind {
     position: absolute;
     width: 0;
@@ -76,7 +70,6 @@ $board = $sql->fetch_array();
     margin: 0px auto;
     margin-bottom: 20px;
   }
-
 
   .ck_read_modal_body form {
     width: 80%;
@@ -133,7 +126,6 @@ $board = $sql->fetch_array();
     position: absolute;
     top: 10px;
     right: 10px;
-
     cursor: pointer;
   }
 
@@ -223,17 +215,12 @@ $board = $sql->fetch_array();
 
 
   <?php 
-
 			} else { ?>
     <script type="text/javascript">
       alert('비밀번호를 확인해주세요.');
       history.back();
     </script>
-  <!--- 아니면 비밀번호가 틀리다는 메시지를 보여줍니다 -->
   <?php } }; ?>
 
-
-
 </body>
-
 </html>

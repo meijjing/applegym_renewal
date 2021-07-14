@@ -9,11 +9,7 @@ $bno = $_GET['idx'];
 
 $sql = mq("select * from notice_board where idx='$bno';");
 $board = $sql->fetch_array();
-
-
-
 ?>
-
 <!DOCTYPE html>
 <html lang="ko">
 
@@ -37,15 +33,9 @@ $board = $sql->fetch_array();
   <!-- jQuery -->
   <script src="../js/jquery-3.6.0.min.js"></script>
   <script src="../js/admin_common.js" defer></script>
-
-
-
-
-
 </head>
 
 <body>
-
   <div class="wrap">
     
     <!-- admin header -->
@@ -66,9 +56,7 @@ $board = $sql->fetch_array();
             <li class="home_btn"><a href="../index.php">홈으로</a></li>
             <li class="logout_btn"><a href="#" onclick="log_out()">로그아웃</a></li>
           </ul>
-
         </nav>
-
       </div><!-- header -->
     </header>
 
@@ -137,9 +125,7 @@ $board = $sql->fetch_array();
               <input type="checkbox" name="lock" id="lock" value="1">
               <label for="lock">비밀글로 설정합니다.</label>
             </p>
-
           </fieldset>
-
 
           <p class="btns cfixed">
               <button type="submit" value="수정하기">수정하기</button>
@@ -147,13 +133,8 @@ $board = $sql->fetch_array();
               <button type="button" value="뒤로가기" onclick="history.back()">돌아가기</button>
             </p>
         </form>
-      
-
     </div><!-- write_section -->
-
   </div><!-- wrap -->
-
-
 
   <!-- 폼체크 스크립트 -->
   <script type="text/javascript">
@@ -168,7 +149,6 @@ $board = $sql->fetch_array();
       var pwd = document.getElementById("pwd");
       var lock = document.getElementById("lock");
 
-
       // 이름(필수) 미입력시
       if (!auth_nm.value) { // if(!mem_nm.value) //값이 없다면
         // if (mem_nm.value != "") {   // if(mem_nm.value) //값이 있다면
@@ -180,7 +160,6 @@ $board = $sql->fetch_array();
 
       // 비밀번호(필수) 미입력시
       if (!pwd.value) {
-
         alert("비밀번호를 입력하세요.");
         pwd.focus();
         return false;
@@ -196,7 +175,6 @@ $board = $sql->fetch_array();
       // 비밀번호 길이 정하기 * 8자리 *
 
       if (pwd.length < 8) {
-
         alert("비밀번호는 8자리로 입력해주세요.");
         pwd.focus();
         return false;
@@ -205,7 +183,6 @@ $board = $sql->fetch_array();
 
       // 제목(필수) 미입력시
       if (!title.value) {
-
         alert("제목을 입력하세요.");
         title.focus();
         return false;
@@ -213,7 +190,6 @@ $board = $sql->fetch_array();
 
       // 내용(필수) 미입력시
       if (!content.value) {
-
         alert("내용을 입력하세요.");
         content.focus();
         return false;
@@ -229,5 +205,4 @@ $board = $sql->fetch_array();
   </script>
 
 </body>
-
 </html>

@@ -1,13 +1,10 @@
 <!-- community_read.php -->
 <?php
-
 // 세션 실행
 session_start();
 
 $s_id = isset($_SESSION["s_id"])? $_SESSION["s_id"]:"";
 $s_name = isset($_SESSION["s_name"])? $_SESSION["s_name"]:"";
-
-
 
 include "../inc/dbcon.php";
 
@@ -17,7 +14,6 @@ $bno = $_GET['idx'];
 $hit = mysqli_fetch_array(mq("select * from board where idx ='$bno';"));
 $hit = $hit['hit'] + 1;
 $fet = mq("update board set hit = '$hit' where idx = '$bno';");
-
 
 /* 받아온 idx값을 선택 */
 $sql = mq("select * from board where idx='$bno';"); 
@@ -82,8 +78,6 @@ $board = $sql->fetch_array();
         </aside>
       </div>
     </section><!-- main_section -->
-
-
 
     <section class="community_read_section">
 
@@ -164,15 +158,8 @@ $board = $sql->fetch_array();
 
 
 
-
-
-
-
     <!-- 댓글 -->
-
     <section class="cmnt_section">
-
-
       <!-- 댓글 입력 폼 -->
       <div class="cm_input">
         <form action="community_reply_ok.php?idx=<?php echo $bno; ?>" method="post" class="cm_input cfixed">
@@ -198,7 +185,6 @@ $board = $sql->fetch_array();
         </form>
       </div><!-- cm_input -->
 
-      
 
       <!-- 댓글 목록 불러오기 -->
     <?php 
@@ -206,7 +192,6 @@ $board = $sql->fetch_array();
     $result = mysqli_query($dbcon, $query);
     while ( $reply = mysqli_fetch_array($result)) {
     ?>
-
 
       <div class="reply_log">
         <div class="cmnt_table">
@@ -234,12 +219,10 @@ $board = $sql->fetch_array();
           </table>
         </div><!-- cm_table -->
 
-
         <!-- 댓글 수정 폼 -->
         <div id="cm_edit_modal">
           <div class="edit_modal_body">
             <h3>댓글 수정하기</h3>
-
 
             <form action="community_reply_edit_ok.php" method="post">
               <fieldset>
@@ -289,11 +272,9 @@ $board = $sql->fetch_array();
 
       </div><!-- reply_log -->
       <?php }; ?>
-
     </section><!-- cmnt_section -->
 
     <?php include "../footer.php"; ?>
-
 
   </div><!-- wrap -->
 
@@ -308,7 +289,6 @@ $board = $sql->fetch_array();
         location.href = "community_del_ok.php?idx="+idx;
       };
     };
-
 
     // 게시글 삭제 모달창
     // $(function(){
@@ -350,10 +330,6 @@ $board = $sql->fetch_array();
     //   frm.submit();
     // };
 
-
-
-
-
     // 댓글 수정하기 모달창
     $(function(){
       $(".cm_edit_btn").click(function() {
@@ -364,8 +340,6 @@ $board = $sql->fetch_array();
       });
     });
 
-
-
     // 댓글 삭제하기 모달창
     $(function(){
       $(".cm_del_btn").click(function() {
@@ -375,16 +349,7 @@ $board = $sql->fetch_array();
         $(this).closest("#cm_del_modal").removeClass('active')
       });
     });
-    
-
-
   </script>
 
-
-
-
-
-
 </body>
-
 </html>

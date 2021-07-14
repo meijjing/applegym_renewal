@@ -1,14 +1,9 @@
 <?php
-
 session_start();
 
 $s_id = isset($_SESSION["s_id"])? $_SESSION["s_id"]:"";
 $s_name = isset($_SESSION["s_name"])? $_SESSION["s_name"]:"";
 $s_pwd = isset($_SESSION["s_pwd"])? $_SESSION["s_pwd"]:"";
-
-// echo $s_id;
-// exit;
-
 
 include "../inc/dbcon.php";
 
@@ -19,8 +14,6 @@ include "../inc/dbcon.php";
 
   $cmnt = $_POST['cmnt'];
 
-  
-  
   // if($bno && $cm_user && $cm_pwd && $cmnt) {
   if($bno && $cmnt) {
 

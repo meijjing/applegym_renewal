@@ -1,10 +1,7 @@
 <?php
-
 // 세션 연결
 // session_start();
 // $s_idx = isset($_SESSION["s_idx"])? $_SESSION["s_idx"]:"";
-
-
 $idx = $_GET["idx"];
 
 // db 연결
@@ -18,7 +15,6 @@ mysqli_query($dbcon, $sql) or die(mysqli_error($dbcon));
 
 // db 종료
 mysqli_close($dbcon);
-
 
 // 페이지 이동
 echo "

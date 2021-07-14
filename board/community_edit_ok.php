@@ -1,5 +1,4 @@
 <?php
-
 // db 연결
 include "../inc/dbcon.php";
 
@@ -20,13 +19,10 @@ $filename = iconv("UTF-8", "EUC-KR", $_FILES['file']['name']);
 $folder = "upload/".$filename;
 move_uploaded_file($tmpfile, $folder);
 
-
-
 // 글의 pwd를 가져온다.
 $query = "SELECT * FROM board WHERE idx=$bno;";
 $result = mysqli_query($dbcon, $query);
 $board = mysqli_fetch_array($result);
-
 
 // if ($_POST['lock']) {
 //   $lock_post = 'Y';
@@ -40,7 +36,6 @@ $board = mysqli_fetch_array($result);
 if (!$_POST['pwd']) {
 
   $sql = mq("update board set auth_nm='$auth_nm', pwd='$pwd', email='$email', title='$title', content='$content', b_file='$o_name' where idx='$bno';");
-
   ?>
 
       <script type="text/javascript">
@@ -54,9 +49,7 @@ if (!$_POST['pwd']) {
 } else if ($_POST['pwd']) {// 비밀번호를 입력한 경우
 
   if (password_verify($pwd, $board['pwd'])) {
-
     $sql = mq("update board set auth_nm='$auth_nm', pwd='$pwd', email='$email', title='$title', content='$content', b_file='$o_name' where idx='$bno';");
-
     ?>
 
       <script type="text/javascript">
@@ -78,7 +71,5 @@ if (!$_POST['pwd']) {
     ");
 
 };
-
-
 ?>
 
