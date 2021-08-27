@@ -4,8 +4,8 @@
 // 세션 실행
 session_start();
 
-$s_id = isset($_SESSION["s_id"])? $_SESSION["s_id"]:"";
-$s_name = isset($_SESSION["s_name"])? $_SESSION["s_name"]:"";
+$s_id = isset($_SESSION["s_id"]) ? $_SESSION["s_id"] : "";
+$s_name = isset($_SESSION["s_name"]) ? $_SESSION["s_name"] : "";
 
 ?>
 
@@ -60,28 +60,28 @@ $s_name = isset($_SESSION["s_name"])? $_SESSION["s_name"]:"";
 
 
   <?php
-    // if(로그인 되었다면){
-    if($s_id){
+  // if(로그인 되었다면){
+  if ($s_id) {
   ?>
 
   <script type="text/javascript">
-    function log_out() {
-      var ck = confirm("로그아웃 하시겠습니까?");
-      if (ck == true) {
-        location.href = "members/logout.php";
-      };
-    }
+  function log_out() {
+    var ck = confirm("로그아웃 하시겠습니까?");
+    if (ck == true) {
+      location.href = "members/logout.php";
+    };
+  }
   </script>
 
   <?php
   };
-?>
+  ?>
 
 </head>
 
 <body>
   <div id="wrap">
-    
+
     <section class="info-section">
       <h2 class="blind">사용자 퀵 메뉴</h2>
       <ul class="info-list">
@@ -90,7 +90,7 @@ $s_name = isset($_SESSION["s_name"])? $_SESSION["s_name"]:"";
         <li class="info-user"><a href="my/mypage.php">USER</a></li>
 
         <?php
-        if(!$s_id){ // 로그인인 되지 않았다면
+        if (!$s_id) { // 로그인인 되지 않았다면
         ?>
         <li class="info-join"><a href="members/join.php">JOIN</a></li>
 
@@ -100,7 +100,7 @@ $s_name = isset($_SESSION["s_name"])? $_SESSION["s_name"]:"";
 
         <li class="info-logout"><a href="#" onclick="log_out()">LOGOUT</a></li>
 
-        <?php  
+        <?php
         };
         ?>
       </ul>
@@ -155,7 +155,7 @@ $s_name = isset($_SESSION["s_name"])? $_SESSION["s_name"]:"";
             </ul>
           </li>
         </ul>
-      
+
       </nav>
 
       <!-- user menu -->
@@ -163,8 +163,8 @@ $s_name = isset($_SESSION["s_name"])? $_SESSION["s_name"]:"";
         <h2 class="blind">사용자 메뉴</h2>
 
         <?php
-        if(!$s_id){ // 로그인인 되지 않았다면
-          ?>
+        if (!$s_id) { // 로그인인 되지 않았다면
+        ?>
         <ul class="no_login">
           <li class="login"><a href="members/login.php">로그인</a></li>
           <li class="blind"><a href="members/join.php">회원가입</a></li>
@@ -172,22 +172,22 @@ $s_name = isset($_SESSION["s_name"])? $_SESSION["s_name"]:"";
 
         <?php
         } else { // 로그인이 되었다면
-          ?>
+        ?>
         <ul>
           <li class="welcome_mem">
             <span><?php echo $s_name; ?></span> 님, 안녕하세요.
           </li>
 
-          <?php if($s_id == "admin") { ?>
+          <?php if ($s_id == "admin") { ?>
           <li class="admin_pg"><a href="admin/admin.php">관리자 페이지</a></li>
           <?php }; ?>
 
-          
+
           <li class="edit"><a href="members/edit.php">회원정보수정</a></li>
           <li class="user_menu_rb logout"><a href="#" onclick="log_out()">로그아웃</a></li>
         </ul>
 
-        <?php  
+        <?php
         };
         ?>
 
@@ -196,21 +196,31 @@ $s_name = isset($_SESSION["s_name"])? $_SESSION["s_name"]:"";
 
 
     <!-- 슬라이드 영역 -->
-    <article class="slider">
-        <h2 class="blind">메인 이미지</h2>
-        <div>
-          <img src="images/main/main_img.jpg" alt="">
-        
-        </div>
-    </article> 
-    
-    
-      <!-- 상단 공지사항 -->
+    <!-- <article class="slider">
+      <h2 class="blind">메인 이미지</h2>
+      <div>
+        <img src="images/main/main_img.jpg" alt="">
+      </div>
+    </article> -->
+
+    <div class="main">
+      <video autoplay muted loop>
+        <source src="images/main/gym.mp4" type="video/mp4" />
+      </video>
+      <div class="mainText">
+        <p>Applegym</p>
+        <p>Fitness</p>
+      </div>
+      <!-- <div class="dot"></div> -->
+    </div>
+
+
+    <!-- 상단 공지사항 -->
     <div id="top-notice">
       <p><a href="#">전 지점 2월 15일 연장관련 운영안내</a></p>
       <button>오늘 하루 보지 않기<span>닫기</span></button>
     </div>
-      
+
     <!-- content -->
     <section class="content">
       <h2 class="blind">콘텐츠</h2>
@@ -234,8 +244,8 @@ $s_name = isset($_SESSION["s_name"])? $_SESSION["s_name"]:"";
         </h2>
         <p data-aos="fade-up" data-aos-duration="800" class="sec-desc">애플짐의 다양한 프로그램, 반신욕, 사우나까지</p>
         <div data-aos="fade-up" data-aos-duration="800" class="tit-line"></div>
-          
-        
+
+
 
         <ul class="program-list">
           <li class="aos" data-aos="fade-up" data-aos-duration="800"><a href="program/program.php#section1">
@@ -333,7 +343,7 @@ $s_name = isset($_SESSION["s_name"])? $_SESSION["s_name"]:"";
         </h2>
         <p data-aos="fade-up" data-aos-duration="800" class="sec-desc">애플짐 전 지점 새로운 이벤트</p>
         <div data-aos="fade-up" data-aos-duration="800" class="tit-line"></div>
-          
+
 
         <div data-aos="fade-up" data-aos-duration="800" class="eventimgs aos">
           <div class="eventimg"><a href="#"><img src="images/main/event-img1.jpg" alt="#"></a></div>
@@ -375,7 +385,7 @@ $s_name = isset($_SESSION["s_name"])? $_SESSION["s_name"]:"";
         <h2 data-aos="fade-up" data-aos-duration="800" class="sec-tit aos">
           <a href="#">APPLEGYM CHANNEL</a>
         </h2>
-            <!-- <span class="tit-line"></span> -->
+        <!-- <span class="tit-line"></span> -->
 
         <ul class="channel-body">
           <li class="counter_wrap">
@@ -523,49 +533,49 @@ $s_name = isset($_SESSION["s_name"])? $_SESSION["s_name"]:"";
 
 
   <script>
-    //aos
-    AOS.init({disable: 'mobile'});
+  //aos
+  AOS.init({
+    disable: 'mobile'
+  });
 
 
-    // 공지사항 팝업 창
-    function setCookie(name, value, expiredays) {
-      var today = new Date();
-      today.setDate(today.getDate() + expiredays);
-      document.cookie = name + '=' + escape(value) + '; expires=' + today.toGMTString();
-    }
+  // 공지사항 팝업 창
+  function setCookie(name, value, expiredays) {
+    var today = new Date();
+    today.setDate(today.getDate() + expiredays);
+    document.cookie = name + '=' + escape(value) + '; expires=' + today.toGMTString();
+  }
 
-    function getCookie(name) {
-      var cookie = document.cookie;
-      if (document.cookie != "") {
+  function getCookie(name) {
+    var cookie = document.cookie;
+    if (document.cookie != "") {
 
-        var cookie_array = cookie.split("; ");
+      var cookie_array = cookie.split("; ");
 
-        for (var index in cookie_array) {
+      for (var index in cookie_array) {
 
-          var cookie_name = cookie_array[index].split("=");
+        var cookie_name = cookie_array[index].split("=");
 
-          if (cookie_name[0] == "mycookie") {
-            return cookie_name[1];
-          }
+        if (cookie_name[0] == "mycookie") {
+          return cookie_name[1];
         }
       }
-      return;
     }
-    
-    $("#top-notice button").click(function () {
-      $("#top-notice").slideUp();
-      setCookie("mycookie", 'popupEnd', 1);
-    })
+    return;
+  }
 
-    var checkCookie = getCookie("mycookie");
+  $("#top-notice button").click(function() {
+    $("#top-notice").slideUp();
+    setCookie("mycookie", 'popupEnd', 1);
+  })
 
-    if (checkCookie == 'popupEnd') {
-      $("#top-notice").hide();
-    } else {
-      $("#top-notice").show();
-    }
+  var checkCookie = getCookie("mycookie");
 
-    
+  if (checkCookie == 'popupEnd') {
+    $("#top-notice").hide();
+  } else {
+    $("#top-notice").show();
+  }
   </script>
 
 </body>
